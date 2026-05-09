@@ -2,17 +2,113 @@
 @use "../abstracts/mixins" as *;
 
 .topbar {
-  background: $color-navy-light;
-  color: $color-gray;
-  font-size: 13px;
+  position: relative;
+  z-index: 1000;
 
-  &__wrapper {
+  background: rgba($color-navy, 0.92);
+  border-bottom: 1px solid rgba($color-white, 0.08);
+
+  font-size: 13px;
+  color: $color-gray;
+
+  &__inner {
     @include container;
-    @include flex-between;
-    min-height: 42px;
+
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  span {
+  &__contacts {
+    display: none;
+  }
+
+  &__actions {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    a {
+      color: $color-gray;
+      font-size: 12px;
+      transition: $transition;
+
+      &:hover {
+        color: $color-blue-soft;
+      }
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    a,
+    span {
+      color: $color-gray;
+      font-size: 12px;
+    }
+
+    a {
+      transition: $transition;
+
+      &:hover,
+      &.is-active {
+        color: $color-white;
+      }
+    }
+  }
+
+  &__booking {
+    background: transparent;
     color: $color-blue-soft;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  @include tablet {
+    &__inner {
+      justify-content: space-between;
+    }
+
+    &__contacts {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    &__phone,
+    &__address {
+      color: $color-gray;
+      transition: $transition;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+
+    &__actions {
+      width: auto;
+    }
   }
 }

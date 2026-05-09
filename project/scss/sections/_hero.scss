@@ -11,9 +11,13 @@
 
   overflow: hidden;
 
-  padding: 120px 0 90px;
-
   background: $color-navy;
+
+  padding: 120px 0 140px;
+
+  @include desktop {
+    padding: 160px 0 120px;
+  }
 
   // VIDEO
   &__video {
@@ -63,8 +67,9 @@
   p {
     max-width: 620px;
 
-    color: $color-gray;
+    color: $color-white;
 
+    font-size: 20px;
     line-height: 1.7;
   }
 

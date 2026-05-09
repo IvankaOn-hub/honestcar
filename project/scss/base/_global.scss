@@ -5,6 +5,30 @@ body {
   font-family: $font-main;
   background: $color-navy;
   color: $color-light;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+.section-title {
+  font-family: $font-heading;
+  font-weight: 500;
+}
+
+h1,
+.section__title {
+  letter-spacing: -0.05em;
+}
+
+p {
+  font-weight: 300;
 }
 
 .container {
@@ -13,7 +37,8 @@ body {
 
 .eyebrow {
   color: $color-blue-soft;
-  font-size: 12px;
+  font-family: $font-main;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -21,6 +46,11 @@ body {
 
 .section {
   @include section-padding;
+  padding: 72px 0;
+
+  @include desktop {
+    padding: 110px 0;
+  }
 
   &__head {
     max-width: 760px;
@@ -35,13 +65,16 @@ body {
   &__text {
     margin-top: 20px;
     color: $color-gray;
+    font-size: 18px;
     line-height: 1.7;
+    max-width: 70ch;
   }
 }
 
 .grid {
   display: grid;
   gap: 20px;
+  grid-template-columns: 1fr;
 
   &--3 {
     grid-template-columns: repeat(3, 1fr);
@@ -51,8 +84,12 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (max-width: $tablet) {
-    grid-template-columns: 1fr;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

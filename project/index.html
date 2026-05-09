@@ -4,21 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <!-- 01. Top Bar -->
     <div class="topbar">
-      <div class="topbar__wrapper">
-        <p>Преміум автосервіс у вашому місті</p>
-        <p><span>Тел:</span> +38 (000) 000 00 00</p>
+      <div class="topbar__inner">
+        <div class="topbar__contacts">
+          <a class="topbar__phone" href="tel:504367207">504 367 207</a>
+
+          <a class="topbar__address" href="https://maps.app.goo.gl/PU27N4JTdbqkwk2H9" target="_blank" rel="noopener noreferrer">
+            Hetmańska 47A, 04-305 Warszawa
+          </a>
+        </div>
+
+        <div class="topbar__actions">
+          <div class="topbar__socials" aria-label="Соціальні мережі">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="TikTok">TT</a>
+          </div>
+
+          <div class="topbar__lang">
+            <a href="#" class="is-active">UA</a>
+            <span>/</span>
+            <a href="#">RU</a>
+          </div>
+
+          <button class="topbar__booking js-open-booking" type="button">Записатися</button>
+        </div>
       </div>
     </div>
 
     <!-- 02. Header / Navigation -->
     <header class="header">
       <div class="header__wrapper">
-        <a href="#" class="header__logo">CTO</a>
+        <a href="#" class="header__logo"><img src="images/logo.png" alt="Logo" /></a>
 
         <nav class="header__nav">
           <a href="#services">Послуги</a>
@@ -28,7 +58,7 @@
           <a href="#faq">FAQ</a>
         </nav>
 
-        <a href="#booking" class="btn btn--ghost">Записатись</a>
+        <button class="btn btn--primary js-open-booking" type="button">Записатися</button>
       </div>
     </header>
 
@@ -48,12 +78,15 @@
           <div class="hero__content">
             <h1>Honest Car Service</h1>
 
-            <p>Діагностика, ремонт та сервіс із сучасним підходом.</p>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even slightly believable.
+            </p>
 
             <div class="hero__actions">
-              <a href="#" class="btn btn--primary"> Записатись </a>
+              <a href="#" class="btn btn--primary">Записатись</a>
 
-              <a href="#" class="btn btn--ghost"> Послуги </a>
+              <a href="#" class="btn btn--ghost">Послуги</a>
             </div>
           </div>
         </div>
@@ -64,27 +97,22 @@
         <div class="services__wrapper">
           <div class="section__head">
             <p class="eyebrow">Services</p>
-            <h2 class="section__title">Послуги автосервісу</h2>
+            <h2 class="section__title">Lorem ipsum dolor</h2>
             <p class="section__text">
-              Повний комплекс робіт для технічного стану, безпеки та зовнішнього
-              вигляду вашого автомобіля.
+              sit amet consectetur adipisicing elit. Fugit natus earum molestias harum! Quisquam, aliquid distinctio! Est, vero labore natus
+              qu
             </p>
           </div>
 
           <div class="grid grid--4">
             <article class="card">
               <h3>Діагностика</h3>
-              <p>
-                Комп’ютерна перевірка систем авто, електроніки, двигуна та
-                помилок.
-              </p>
+              <p>Комп’ютерна перевірка систем авто, електроніки, двигуна та помилок.</p>
             </article>
 
             <article class="card">
               <h3>Технічне обслуговування</h3>
-              <p>
-                Заміна мастил, фільтрів, рідин та планове ТО за регламентом.
-              </p>
+              <p>Заміна мастил, фільтрів, рідин та планове ТО за регламентом.</p>
             </article>
 
             <article class="card">
@@ -94,9 +122,7 @@
 
             <article class="card">
               <h3>Детейлінг</h3>
-              <p>
-                Полірування, хімчистка, захисні покриття та догляд за салоном.
-              </p>
+              <p>Полірування, хімчистка, захисні покриття та догляд за салоном.</p>
             </article>
           </div>
         </div>
@@ -113,17 +139,12 @@
           <div class="before-after__grid">
             <div class="card">
               <h3>До</h3>
-              <p>
-                Авто з пошкодженнями, слідами зносу або технічними проблемами.
-              </p>
+              <p>Авто з пошкодженнями, слідами зносу або технічними проблемами.</p>
             </div>
 
             <div class="card">
               <h3>Після</h3>
-              <p>
-                Відновлений стан, чистий вигляд, справна робота систем і
-                впевненість на дорозі.
-              </p>
+              <p>Відновлений стан, чистий вигляд, справна робота систем і впевненість на дорозі.</p>
             </div>
           </div>
         </div>
@@ -138,14 +159,8 @@
           </div>
 
           <div class="about__text">
-            <p>
-              Ми створюємо сервіс, де клієнт отримує не просто ремонт, а
-              зрозумілий, комфортний і якісний процес обслуговування авто.
-            </p>
-            <p>
-              Наша команда працює з увагою до деталей, використовує сучасне
-              обладнання та пояснює кожен етап робіт.
-            </p>
+            <p>Ми створюємо сервіс, де клієнт отримує не просто ремонт, а зрозумілий, комфортний і якісний процес обслуговування авто.</p>
+            <p>Наша команда працює з увагою до деталей, використовує сучасне обладнання та пояснює кожен етап робіт.</p>
           </div>
         </div>
       </section>
@@ -188,26 +203,17 @@
           <div class="grid grid--3">
             <article class="card">
               <h3>Олександр</h3>
-              <p>
-                “Швидко провели діагностику, все пояснили й одразу погодили
-                роботи.”
-              </p>
+              <p>“Швидко провели діагностику, все пояснили й одразу погодили роботи.”</p>
             </article>
 
             <article class="card">
               <h3>Марина</h3>
-              <p>
-                “Дуже приємний сервіс. Авто повернули чистим і в ідеальному
-                стані.”
-              </p>
+              <p>“Дуже приємний сервіс. Авто повернули чистим і в ідеальному стані.”</p>
             </article>
 
             <article class="card">
               <h3>Ігор</h3>
-              <p>
-                “Відчувається преміальний підхід. Без хаосу, все чітко й
-                професійно.”
-              </p>
+              <p>“Відчувається преміальний підхід. Без хаосу, все чітко й професійно.”</p>
             </article>
           </div>
         </div>
@@ -230,22 +236,6 @@
             <span class="brands__item">Lexus</span>
             <span class="brands__item">Porsche</span>
             <span class="brands__item">Tesla</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- 10. CTA Booking -->
-      <section class="cta-booking section" id="booking">
-        <div class="cta-booking__wrapper">
-          <div class="cta-booking__content">
-            <p class="eyebrow">Book Service</p>
-            <h2 class="section__title">Запишіться на сервіс сьогодні</h2>
-            <p class="section__text">
-              Залиште заявку, і ми зв’яжемося з вами для уточнення деталей та
-              підбору зручного часу.
-            </p>
-
-            <a href="#contact" class="btn btn--primary">Залишити заявку</a>
           </div>
         </div>
       </section>
@@ -292,25 +282,17 @@
 
           <div class="faq__item">
             <h3>Чи можна приїхати без запису?</h3>
-            <p>
-              Так, але для швидкого обслуговування краще попередньо записатися.
-            </p>
+            <p>Так, але для швидкого обслуговування краще попередньо записатися.</p>
           </div>
 
           <div class="faq__item">
             <h3>Чи погоджуєте ви вартість перед ремонтом?</h3>
-            <p>
-              Так, ми починаємо роботи тільки після погодження кошторису з
-              клієнтом.
-            </p>
+            <p>Так, ми починаємо роботи тільки після погодження кошторису з клієнтом.</p>
           </div>
 
           <div class="faq__item">
             <h3>З якими авто ви працюєте?</h3>
-            <p>
-              Ми обслуговуємо популярні європейські, японські, корейські та
-              електричні авто.
-            </p>
+            <p>Ми обслуговуємо популярні європейські, японські, корейські та електричні авто.</p>
           </div>
         </div>
       </section>
@@ -320,10 +302,8 @@
         <div class="seo-text__wrapper">
           <h2>Преміум СТО для якісного обслуговування автомобіля</h2>
           <p>
-            Наш автосервіс пропонує професійну діагностику, технічне
-            обслуговування, ремонт ходової частини, електроніки, гальмівної
-            системи та комплексний догляд за автомобілем. Ми працюємо для
-            водіїв, які цінують якість, прозорість і комфорт.
+            Наш автосервіс пропонує професійну діагностику, технічне обслуговування, ремонт ходової частини, електроніки, гальмівної системи
+            та комплексний догляд за автомобілем. Ми працюємо для водіїв, які цінують якість, прозорість і комфорт.
           </p>
         </div>
       </section>
@@ -361,9 +341,7 @@
       <div class="footer__wrapper">
         <div>
           <h3>CTO</h3>
-          <p>
-            Преміум автосервіс для тих, хто цінує якість, точність і комфорт.
-          </p>
+          <p>Преміум автосервіс для тих, хто цінує якість, точність і комфорт.</p>
         </div>
 
         <div>
@@ -386,5 +364,93 @@
         <p>© 2026 CTO. All rights reserved.</p>
       </div>
     </footer>
+
+    <div class="floating-booking" id="bookingPanel">
+      <div class="floating-booking__inner">
+        <div class="floating-booking__intro">
+          <p>Запишіться на візит</p>
+          <span>або поставте запитання</span>
+        </div>
+
+        <form class="floating-booking__form">
+          <div class="floating-booking__compact">
+            <input class="floating-booking__email js-expand-booking" type="email" placeholder="Ваш email" required />
+
+            <button class="floating-booking__close js-close-booking" type="button" aria-label="Закрити форму">×</button>
+          </div>
+
+          <div class="floating-booking__full">
+            <div class="floating-booking__head">
+              <p class="eyebrow">Quick Booking</p>
+              <h2>Запишіться на візит або отримайте оцінку сервісу</h2>
+              <p>Заповніть коротку форму — ми звʼяжемося з вами для уточнення деталей.</p>
+            </div>
+
+            <div class="floating-booking__purpose">
+              <p>З якою метою хочете звʼязатися?</p>
+
+              <label>
+                <input type="radio" name="purpose" value="visit" checked />
+                <span>Записатися на візит</span>
+              </label>
+
+              <label>
+                <input type="radio" name="purpose" value="question" />
+                <span>Інше запитання</span>
+              </label>
+            </div>
+
+            <div class="floating-booking__fields">
+              <input type="text" placeholder="Ваше імʼя" />
+              <input type="tel" placeholder="Телефон" />
+              <input type="text" placeholder="Останні 7 цифр VIN" />
+              <textarea placeholder="Повідомлення"></textarea>
+            </div>
+
+            <div class="floating-booking__actions">
+              <button class="btn btn--primary" type="submit">Записатися</button>
+
+              <button class="btn btn--ghost js-collapse-booking" type="button">Закрити</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const bookingPanel = document.querySelector("#bookingPanel");
+
+      const openButtons = document.querySelectorAll(".js-open-booking");
+
+      const expandInput = document.querySelector(".js-expand-booking");
+
+      const closeButton = document.querySelector(".js-close-booking");
+
+      const collapseButton = document.querySelector(".js-collapse-booking");
+
+      // OPEN BOOKING
+      openButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          bookingPanel.classList.remove("is-hidden");
+
+          bookingPanel.classList.add("is-expanded");
+        });
+      });
+
+      // EXPAND ON EMAIL FOCUS
+      expandInput.addEventListener("focus", () => {
+        bookingPanel.classList.add("is-expanded");
+      });
+
+      // HIDE PANEL
+      closeButton.addEventListener("click", () => {
+        bookingPanel.classList.add("is-hidden");
+      });
+
+      // COLLAPSE FULLSCREEN
+      collapseButton.addEventListener("click", () => {
+        bookingPanel.classList.remove("is-expanded");
+      });
+    </script>
   </body>
 </html>

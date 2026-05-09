@@ -10,7 +10,8 @@ $color-gray: #aab4c3;
 $color-dark-gray: #5f6b7a;
 
 // TYPOGRAPHY
-$font-main: "Inter", "Helvetica Neue", Arial, sans-serif;
+$font-main: "Inter", sans-serif;
+$font-heading: "Red Hat Display", sans-serif;
 
 // CONTAINER
 $container-width: 1440px;
@@ -18,13 +19,15 @@ $container-padding: 56px;
 $container-padding-mobile: 24px;
 
 // RADIUS
-$radius-sm: 12px;
-$radius-md: 20px;
-$radius-full: 999px;
+$radius-sm: 4px;
+$radius-md: 4px;
+$radius-full: 4px;
 
 // TRANSITION
 $transition: 0.25s ease;
 
 // BREAKPOINTS
-$tablet: 980px;
-$mobile: 640px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1440px;

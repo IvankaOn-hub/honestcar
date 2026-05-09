@@ -1,13 +1,35 @@
 @use "./variables" as *;
 
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $wide) {
+    @content;
+  }
+}
+
 @mixin container {
   width: 100%;
-  max-width: $container-width;
+  max-width: $wide;
   margin: 0 auto;
-  padding: 0 $container-padding;
+  padding: 0 20px;
 
-  @media (max-width: $tablet) {
-    padding: 0 $container-padding-mobile;
+  @include tablet {
+    padding: 0 32px;
+  }
+
+  @include desktop {
+    padding: 0 56px;
   }
 }
 
@@ -26,13 +48,17 @@
 }
 
 @mixin title-xl {
+  font-family: $font-heading;
   font-size: clamp(48px, 7vw, 96px);
+  font-weight: 500;
   line-height: 0.95;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.055em;
 }
 
 @mixin title-lg {
+  font-family: $font-heading;
   font-size: clamp(36px, 5vw, 68px);
+  font-weight: 500;
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
 }
