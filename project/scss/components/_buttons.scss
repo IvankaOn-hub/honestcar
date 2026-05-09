@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 30px;
+
+  border-radius: $radius-full;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: $transition;
+
+  &--primary {
+    background: $color-blue;
+    color: $color-white;
+
+    &:hover {
+      background: $color-blue-soft;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--ghost {
+    border: 1px solid rgba($color-white, 0.35);
+    color: $color-white;
+
+    &:hover {
+      border-color: $color-blue-soft;
+      color: $color-blue-soft;
+    }
+  }
+}

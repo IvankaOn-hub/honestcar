@@ -7,6 +7,384 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>helo</h1>
+    <!-- 01. Top Bar -->
+    <div class="topbar">
+      <div class="topbar__wrapper">
+        <p>Преміум автосервіс у вашому місті</p>
+        <p><span>Тел:</span> +38 (000) 000 00 00</p>
+      </div>
+    </div>
+
+    <!-- 02. Header / Navigation -->
+    <header class="header">
+      <div class="header__wrapper">
+        <a href="#" class="header__logo">CTO</a>
+
+        <nav class="header__nav">
+          <a href="#services">Послуги</a>
+          <a href="#before-after">До / Після</a>
+          <a href="#about">Про нас</a>
+          <a href="#reviews">Відгуки</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <a href="#booking" class="btn btn--ghost">Записатись</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- 03. Hero Banner -->
+      <section class="hero">
+        <!-- VIDEO -->
+        <video class="hero__video" autoplay muted loop playsinline>
+          <source src="./videos/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        <!-- DARK OVERLAY -->
+        <div class="hero__overlay"></div>
+
+        <!-- CONTENT -->
+        <div class="hero__wrapper">
+          <div class="hero__content">
+            <h1>Honest Car Service</h1>
+
+            <p>Діагностика, ремонт та сервіс із сучасним підходом.</p>
+
+            <div class="hero__actions">
+              <a href="#" class="btn btn--primary"> Записатись </a>
+
+              <a href="#" class="btn btn--ghost"> Послуги </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. Services -->
+      <section class="services section" id="services">
+        <div class="services__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">Services</p>
+            <h2 class="section__title">Послуги автосервісу</h2>
+            <p class="section__text">
+              Повний комплекс робіт для технічного стану, безпеки та зовнішнього
+              вигляду вашого автомобіля.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <article class="card">
+              <h3>Діагностика</h3>
+              <p>
+                Комп’ютерна перевірка систем авто, електроніки, двигуна та
+                помилок.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Технічне обслуговування</h3>
+              <p>
+                Заміна мастил, фільтрів, рідин та планове ТО за регламентом.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Ремонт ходової</h3>
+              <p>Підвіска, гальма, рульове керування та інші ключові вузли.</p>
+            </article>
+
+            <article class="card">
+              <h3>Детейлінг</h3>
+              <p>
+                Полірування, хімчистка, захисні покриття та догляд за салоном.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. Before / After -->
+      <section class="before-after section" id="before-after">
+        <div class="before-after__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">Before / After</p>
+            <h2 class="section__title">Результат, який видно</h2>
+          </div>
+
+          <div class="before-after__grid">
+            <div class="card">
+              <h3>До</h3>
+              <p>
+                Авто з пошкодженнями, слідами зносу або технічними проблемами.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Після</h3>
+              <p>
+                Відновлений стан, чистий вигляд, справна робота систем і
+                впевненість на дорозі.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06. About Company -->
+      <section class="about section" id="about">
+        <div class="about__wrapper">
+          <div>
+            <p class="eyebrow">About Company</p>
+            <h2 class="section__title">Автосервіс із преміальним підходом</h2>
+          </div>
+
+          <div class="about__text">
+            <p>
+              Ми створюємо сервіс, де клієнт отримує не просто ремонт, а
+              зрозумілий, комфортний і якісний процес обслуговування авто.
+            </p>
+            <p>
+              Наша команда працює з увагою до деталей, використовує сучасне
+              обладнання та пояснює кожен етап робіт.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07. Why Choose Us -->
+      <section class="why-us section">
+        <div class="why-us__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">Why Choose Us</p>
+            <h2 class="section__title">Чому обирають нас</h2>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Прозорий кошторис</h3>
+              <p>Погоджуємо вартість робіт до початку ремонту.</p>
+            </article>
+
+            <article class="card">
+              <h3>Сучасне обладнання</h3>
+              <p>Використовуємо професійні інструменти та діагностику.</p>
+            </article>
+
+            <article class="card">
+              <h3>Преміальний сервіс</h3>
+              <p>Комфортна комунікація, акуратність і відповідальність.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08. Reviews -->
+      <section class="reviews section" id="reviews">
+        <div class="reviews__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">Reviews</p>
+            <h2 class="section__title">Відгуки клієнтів</h2>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Олександр</h3>
+              <p>
+                “Швидко провели діагностику, все пояснили й одразу погодили
+                роботи.”
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Марина</h3>
+              <p>
+                “Дуже приємний сервіс. Авто повернули чистим і в ідеальному
+                стані.”
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Ігор</h3>
+              <p>
+                “Відчувається преміальний підхід. Без хаосу, все чітко й
+                професійно.”
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09. Car Brands -->
+      <section class="brands section">
+        <div class="brands__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">Car Brands</p>
+            <h2 class="section__title">Працюємо з різними марками авто</h2>
+          </div>
+
+          <div class="brands__list">
+            <span class="brands__item">BMW</span>
+            <span class="brands__item">Mercedes-Benz</span>
+            <span class="brands__item">Audi</span>
+            <span class="brands__item">Volkswagen</span>
+            <span class="brands__item">Toyota</span>
+            <span class="brands__item">Lexus</span>
+            <span class="brands__item">Porsche</span>
+            <span class="brands__item">Tesla</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. CTA Booking -->
+      <section class="cta-booking section" id="booking">
+        <div class="cta-booking__wrapper">
+          <div class="cta-booking__content">
+            <p class="eyebrow">Book Service</p>
+            <h2 class="section__title">Запишіться на сервіс сьогодні</h2>
+            <p class="section__text">
+              Залиште заявку, і ми зв’яжемося з вами для уточнення деталей та
+              підбору зручного часу.
+            </p>
+
+            <a href="#contact" class="btn btn--primary">Залишити заявку</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. Service Process -->
+      <section class="process section">
+        <div class="process__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">Process</p>
+            <h2 class="section__title">Як проходить сервіс</h2>
+          </div>
+
+          <div class="grid grid--4">
+            <article class="card">
+              <h3>01. Заявка</h3>
+              <p>Ви залишаєте контакти або телефонуєте нам.</p>
+            </article>
+
+            <article class="card">
+              <h3>02. Діагностика</h3>
+              <p>Ми перевіряємо авто та визначаємо необхідні роботи.</p>
+            </article>
+
+            <article class="card">
+              <h3>03. Ремонт</h3>
+              <p>Виконуємо роботи після погодження вартості.</p>
+            </article>
+
+            <article class="card">
+              <h3>04. Видача</h3>
+              <p>Передаємо авто та пояснюємо результат.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. FAQ -->
+      <section class="faq section" id="faq">
+        <div class="faq__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">FAQ</p>
+            <h2 class="section__title">Поширені питання</h2>
+          </div>
+
+          <div class="faq__item">
+            <h3>Чи можна приїхати без запису?</h3>
+            <p>
+              Так, але для швидкого обслуговування краще попередньо записатися.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h3>Чи погоджуєте ви вартість перед ремонтом?</h3>
+            <p>
+              Так, ми починаємо роботи тільки після погодження кошторису з
+              клієнтом.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h3>З якими авто ви працюєте?</h3>
+            <p>
+              Ми обслуговуємо популярні європейські, японські, корейські та
+              електричні авто.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. SEO Text -->
+      <section class="seo-text section">
+        <div class="seo-text__wrapper">
+          <h2>Преміум СТО для якісного обслуговування автомобіля</h2>
+          <p>
+            Наш автосервіс пропонує професійну діагностику, технічне
+            обслуговування, ремонт ходової частини, електроніки, гальмівної
+            системи та комплексний догляд за автомобілем. Ми працюємо для
+            водіїв, які цінують якість, прозорість і комфорт.
+          </p>
+        </div>
+      </section>
+
+      <!-- 14. Blog -->
+      <section class="blog section">
+        <div class="blog__wrapper">
+          <div class="section__head">
+            <p class="eyebrow">Blog</p>
+            <h2 class="section__title">Корисні матеріали</h2>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card">
+              <h3>Коли проходити діагностику авто?</h3>
+              <p>Ознаки, які вказують, що авто потребує перевірки.</p>
+            </article>
+
+            <article class="card">
+              <h3>Як підготувати авто до сезону?</h3>
+              <p>Базові поради для безпечної експлуатації.</p>
+            </article>
+
+            <article class="card">
+              <h3>Чому важливо вчасно міняти мастило?</h3>
+              <p>Пояснюємо, як регулярне ТО впливає на ресурс двигуна.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 15. Footer / Contact -->
+    <footer class="footer" id="contact">
+      <div class="footer__wrapper">
+        <div>
+          <h3>CTO</h3>
+          <p>
+            Преміум автосервіс для тих, хто цінує якість, точність і комфорт.
+          </p>
+        </div>
+
+        <div>
+          <h3>Контакти</h3>
+          <p>+38 (000) 000 00 00</p>
+          <p>hello@cto-service.com</p>
+          <p>Ваше місто, Україна</p>
+        </div>
+
+        <div>
+          <h3>Навігація</h3>
+          <p><a href="#services">Послуги</a></p>
+          <p><a href="#about">Про нас</a></p>
+          <p><a href="#reviews">Відгуки</a></p>
+          <p><a href="#faq">FAQ</a></p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 CTO. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

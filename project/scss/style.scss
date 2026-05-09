@@ -1,9 +1,13 @@
-$main-color: #ff6600;
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
 
-body {
-  background: $main-color;
+@use "./base/reset";
+@use "./base/global";
 
-  h1 {
-    color: white;
-  }
-}
+@use "./components/buttons";
+
+@use "./sections/topbar";
+@use "./sections/header";
+@use "./sections/hero";
+@use "./sections/sections";
+@use "./sections/footer";
