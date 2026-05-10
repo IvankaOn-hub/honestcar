@@ -49,12 +49,12 @@ p {
   padding: 72px 0;
 
   @include desktop {
-    padding: 110px 0;
+    padding: 120px 0;
   }
 
   &__head {
     max-width: 760px;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
   }
 
   &__title {

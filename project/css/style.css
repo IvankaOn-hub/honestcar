@@ -1,3 +1,4 @@
+/* $color-navy: #040912; */
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +37,7 @@ ul {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #040912;
+  background: #010308;
   color: #f4f7fb;
   font-size: 18px;
   font-weight: 400;
@@ -89,7 +90,7 @@ p {
 }
 
 .section {
-  padding: 110px 0;
+  padding: 120px 0;
 }
 @media (max-width: 768px) {
   .section {
@@ -101,12 +102,12 @@ p {
 }
 @media (min-width: 1024px) {
   .section {
-    padding: 110px 0;
+    padding: 120px 0;
   }
 }
 .section__head {
   max-width: 760px;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
 }
 .section__title {
   font-family: "Red Hat Display", sans-serif;
@@ -201,7 +202,7 @@ p {
 .btn--primary:hover {
   background: #2f80ff;
   border-color: rgba(138, 184, 255, 0.38);
-  transform: translateY(-1px);
+  transform: translateY(-3px);
 }
 
 .btn--ghost {
@@ -214,7 +215,7 @@ p {
   background: rgba(245, 247, 251, 0.07);
   border-color: rgba(245, 247, 251, 0.28);
   color: #f5f7fb;
-  transform: translateY(-1px);
+  transform: translateY(-3px);
 }
 
 /* .btn {
@@ -261,7 +262,7 @@ p {
   bottom: 0;
   z-index: 999;
   min-height: 82px;
-  background: linear-gradient(90deg, rgba(4, 9, 18, 0.78), rgba(8, 17, 31, 0.54), rgba(47, 128, 255, 0.16));
+  background: linear-gradient(90deg, rgba(1, 3, 8, 0.78), rgba(8, 17, 31, 0.54), rgba(47, 128, 255, 0.16));
   border-top: 1px solid rgba(245, 247, 251, 0.1);
   backdrop-filter: blur(22px);
   transition: min-height 0.45s ease, background 0.45s ease, backdrop-filter 0.45s ease;
@@ -356,7 +357,7 @@ p {
 .floating-booking.is-expanded {
   top: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top right, rgba(47, 128, 255, 0.18), transparent 36%), rgba(4, 9, 18, 0.94);
+  background: radial-gradient(circle at top right, rgba(47, 128, 255, 0.18), transparent 36%), rgba(1, 3, 8, 0.94);
   backdrop-filter: blur(28px);
 }
 .floating-booking.is-expanded .floating-booking__inner {
@@ -715,7 +716,7 @@ p {
 .hero__actions {
   display: flex;
   gap: 16px;
-  margin-top: 38px;
+  margin-top: 50px;
   flex-wrap: wrap;
 }
 
@@ -730,7 +731,7 @@ p {
 .faq,
 .seo-text,
 .blog {
-  padding: 110px 0;
+  padding: 120px 0;
 }
 @media (max-width: 768px) {
   .services,
