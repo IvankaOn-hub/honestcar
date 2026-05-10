@@ -3,24 +3,17 @@
 
 .hero {
   position: relative;
-
   min-height: calc(100vh - 126px);
-
   display: flex;
   align-items: center;
-
   overflow: hidden;
-
-  background: $color-navy;
-
-  padding: 120px 0 140px;
-
-  @include desktop {
-    padding: 160px 0 120px;
-  }
+  padding: 120px 0 90px;
 
   // VIDEO
   &__video {
+    opacity: 0.72;
+
+    filter: saturate(0.72) contrast(1.08) brightness(0.78);
     position: absolute;
     inset: 0;
 
@@ -37,11 +30,7 @@
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(
-      180deg,
-      rgba(7, 17, 31, 0.35) 0%,
-      rgba(7, 17, 31, 0.82) 100%
-    );
+    background: linear-gradient(180deg, rgba(7, 17, 31, 0.35) 0%, rgba(7, 17, 31, 0.82) 100%);
 
     z-index: 2;
   }
@@ -58,6 +47,65 @@
     max-width: 860px;
   }
 
+  &__highlights {
+    margin-top: clamp(32px, 8vw, 45px);
+
+    display: flex;
+
+    position: relative;
+    z-index: 2;
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+  }
+
+  &__highlight {
+    position: relative;
+
+    padding-left: 24px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 6px;
+      left: 0;
+
+      width: 1px;
+      height: calc(100% - 12px);
+
+      background: linear-gradient(180deg, rgba($color-blue-soft, 0.52), rgba($color-white, 0.06));
+    }
+
+    p {
+      margin-top: 10px;
+      color: rgba($color-white, 0.52);
+      font-size: 12px !important;
+      line-height: 1.5;
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__highlight-number {
+    display: block;
+
+    color: rgba($color-white, 0.98);
+
+    font-family: $font-heading;
+
+    font-size: clamp(22px, 3vw, 30px);
+
+    font-weight: 300;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.07em;
+  }
+
   h1 {
     @include title-xl;
 
@@ -65,10 +113,7 @@
   }
 
   p {
-    max-width: 620px;
-
     color: $color-white;
-
     font-size: 20px;
     line-height: 1.7;
   }

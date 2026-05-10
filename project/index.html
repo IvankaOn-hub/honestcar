@@ -20,27 +20,34 @@
     <div class="topbar">
       <div class="topbar__inner">
         <div class="topbar__contacts">
-          <a class="topbar__phone" href="tel:504367207">504 367 207</a>
+          <a class="topbar__link" href="tel:504367207">
+            <img class="icon" src="./images/icons/call.svg" alt="Call" />
+            <span>504 367 207</span>
+          </a>
 
-          <a class="topbar__address" href="https://maps.app.goo.gl/PU27N4JTdbqkwk2H9" target="_blank" rel="noopener noreferrer">
-            Hetmańska 47A, 04-305 Warszawa
+          <a class="topbar__link" href="https://maps.app.goo.gl/PU27N4JTdbqkwk2H9" target="_blank" rel="noopener noreferrer">
+            <img class="icon" src="./images/icons/location.svg" alt="Map" />
+            <span>Hetmańska 47A, 04-305 Warszawa</span>
           </a>
         </div>
 
         <div class="topbar__actions">
-          <div class="topbar__socials" aria-label="Соціальні мережі">
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="TikTok">TT</a>
+          <div class="topbar__socials">
+            <a href="#" aria-label="Instagram">
+              <img src="./images/icons/instagram.svg" alt="Instagram" class="icon" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <img src="./images/icons/facebook.svg" alt="Facebook" class="icon" />
+            </a>
           </div>
 
           <div class="topbar__lang">
             <a href="#" class="is-active">UA</a>
             <span>/</span>
-            <a href="#">RU</a>
+            <a href="#">PL</a>
           </div>
 
-          <button class="topbar__booking js-open-booking" type="button">Записатися</button>
+          <button class="topbar__booking js-open-booking" type="button">Sign up</button>
         </div>
       </div>
     </div>
@@ -51,14 +58,13 @@
         <a href="#" class="header__logo"><img src="images/logo.png" alt="Logo" /></a>
 
         <nav class="header__nav">
-          <a href="#services">Послуги</a>
-          <a href="#before-after">До / Після</a>
-          <a href="#about">Про нас</a>
-          <a href="#reviews">Відгуки</a>
+          <a href="#services">Services</a>
+          <a href="#before-after">Before / After</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
         </nav>
-
-        <button class="btn btn--primary js-open-booking" type="button">Записатися</button>
+        <a class="btn btn--primary" href="tel:+48504367207">Tow Truck</a>
       </div>
     </header>
 
@@ -82,11 +88,28 @@
               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
               injected humour, or randomised words which don't look even slightly believable.
             </p>
+          </div>
+          <div>
+            <div class="hero__highlights">
+              <div class="hero__highlight">
+                <span class="hero__highlight-number">150+</span>
+                <p>Satisfied Clients</p>
+              </div>
 
+              <div class="hero__highlight">
+                <span class="hero__highlight-number">OEM</span>
+                <p>Diagnostics & Service</p>
+              </div>
+
+              <div class="hero__highlight">
+                <span class="hero__highlight-number">24/7</span>
+                <p>Tow Truck Assistance</p>
+              </div>
+            </div>
             <div class="hero__actions">
-              <a href="#" class="btn btn--primary">Записатись</a>
+              <a href="#" class="btn btn--primary">Book a Visit</a>
 
-              <a href="#" class="btn btn--ghost">Послуги</a>
+              <a href="#" class="btn btn--ghost">View Services</a>
             </div>
           </div>
         </div>
@@ -368,13 +391,13 @@
     <div class="floating-booking" id="bookingPanel">
       <div class="floating-booking__inner">
         <div class="floating-booking__intro">
-          <p>Запишіться на візит</p>
-          <span>або поставте запитання</span>
+          <p>Schedule a Visit</p>
+          <span>or ask a question</span>
         </div>
 
         <form class="floating-booking__form">
           <div class="floating-booking__compact">
-            <input class="floating-booking__email js-expand-booking" type="email" placeholder="Ваш email" required />
+            <input class="floating-booking__email js-expand-booking" type="email" placeholder="Your email" required />
 
             <button class="floating-booking__close js-close-booking" type="button" aria-label="Закрити форму">×</button>
           </div>

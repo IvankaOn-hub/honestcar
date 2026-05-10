@@ -4,17 +4,17 @@
 .topbar {
   position: relative;
   z-index: 1000;
-
-  background: rgba($color-navy, 0.92);
-  border-bottom: 1px solid rgba($color-white, 0.08);
-
+  background: linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 0.88));
+  border-bottom: 1px solid rgba($color-white, 0.05);
+  color: rgba($color-white, 0.64);
+  backdrop-filter: blur(18px);
   font-size: 13px;
   color: $color-gray;
 
   &__inner {
     @include container;
 
-    min-height: 44px;
+    min-height: 36px;
 
     display: flex;
     align-items: center;
@@ -25,13 +25,25 @@
     display: none;
   }
 
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    gap: 10px;
+    transition: $transition;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   &__actions {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 20px;
   }
 
   &__socials {
@@ -40,12 +52,11 @@
     gap: 12px;
 
     a {
-      color: $color-gray;
-      font-size: 12px;
+      opacity: 0.8;
       transition: $transition;
 
       &:hover {
-        color: $color-blue-soft;
+        opacity: 1;
       }
     }
   }
@@ -72,17 +83,23 @@
   }
 
   &__booking {
-    background: transparent;
+    min-height: 32px;
+    padding: 0 16px;
+
+    border: 1px solid rgba($color-white, 0.1);
+    border-radius: 4px;
+
+    background: rgba($color-white, 0.03);
     color: $color-blue-soft;
 
-    font-size: 13px;
-    font-weight: 500;
-
-    cursor: pointer;
-    transition: $transition;
-
     &:hover {
+      background: rgba($color-blue, 0.12);
+      border-color: rgba($color-blue-soft, 0.28);
       color: $color-white;
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 

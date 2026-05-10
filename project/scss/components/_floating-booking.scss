@@ -8,14 +8,9 @@
   bottom: 0;
   z-index: 999;
 
-  min-height: 86px;
+  min-height: 82px;
 
-  background: linear-gradient(
-    90deg,
-    rgba($color-navy, 0.78),
-    rgba($color-navy-light, 0.54),
-    rgba($color-blue, 0.16)
-  );
+  background: linear-gradient(90deg, rgba($color-navy, 0.78), rgba($color-navy-light, 0.54), rgba($color-blue, 0.16));
 
   border-top: 1px solid rgba($color-white, 0.1);
   backdrop-filter: blur(22px);
@@ -39,7 +34,7 @@
   &__intro {
     p {
       color: $color-white;
-      font-size: 18px;
+      font-size: 14px;
       line-height: 1.2;
     }
 
@@ -67,7 +62,7 @@
   textarea {
     width: 100%;
 
-    min-height: 48px;
+    min-height: 43px;
     padding: 0 18px;
 
     border-radius: $radius-full;
@@ -79,6 +74,7 @@
 
     &::placeholder {
       color: rgba($color-white, 0.48);
+      font-size: 14px;
     }
 
     &:focus {
@@ -90,12 +86,9 @@
   &__close {
     width: 36px;
     height: 36px;
-
     border-radius: 50%;
-
     background: transparent;
     color: $color-white;
-
     font-size: 24px;
     line-height: 1;
 
@@ -121,13 +114,7 @@
 
     min-height: 100vh;
 
-    background:
-      radial-gradient(
-        circle at top right,
-        rgba($color-blue, 0.18),
-        transparent 36%
-      ),
-      rgba($color-navy, 0.94);
+    background: radial-gradient(circle at top right, rgba($color-blue, 0.18), transparent 36%), rgba($color-navy, 0.94);
 
     backdrop-filter: blur(28px);
 
@@ -158,10 +145,8 @@
     text-align: center;
 
     h2 {
-      font-family: $font-heading;
       margin: 14px 0 18px;
       font-size: clamp(36px, 5vw, 68px);
-      font-weight: 600;
       line-height: 1;
       letter-spacing: -0.05em;
     }
@@ -178,7 +163,6 @@
     margin-bottom: 22px;
     padding: 20px;
 
-    border-radius: $radius-full;
 
     background: rgba($color-white, 0.05);
     border: 1px solid rgba($color-white, 0.08);
@@ -221,7 +205,6 @@
       min-height: 120px;
       padding: 18px;
 
-      border-radius: $radius-full;
       resize: vertical;
     }
   }
@@ -232,47 +215,5 @@
     gap: 14px;
 
     margin-top: 26px;
-  }
-}
-
-@media (max-width: $tablet) {
-  .floating-booking {
-    &__inner {
-      grid-template-columns: 1fr;
-      gap: 16px;
-      padding-top: 18px;
-      padding-bottom: 18px;
-    }
-
-    &__compact {
-      grid-template-columns: 1fr 36px;
-      width: 100%;
-    }
-
-    &.is-expanded {
-      overflow-y: auto;
-
-      .floating-booking__inner {
-        align-items: flex-start;
-        padding-top: 80px;
-        padding-bottom: 40px;
-      }
-    }
-
-    &__fields {
-      grid-template-columns: 1fr;
-    }
-
-    &__purpose {
-      label {
-        display: flex;
-        margin-right: 0;
-        margin-bottom: 12px;
-      }
-    }
-
-    &__actions {
-      flex-direction: column;
-    }
   }
 }
