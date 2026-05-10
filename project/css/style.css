@@ -37,7 +37,7 @@ ul {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #010308;
+  background: #070b12;
   color: #f4f7fb;
   font-size: 18px;
   font-weight: 400;
@@ -76,12 +76,25 @@ p {
 }
 
 .eyebrow {
-  color: #8ab8ff;
+  color: rgba(168, 186, 214, 0.82);
   font-family: "Inter", sans-serif;
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
+  padding-left: 2rem;
+  position: relative;
+}
+.eyebrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 1.5rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(168, 186, 214, 0.82);
 }
 
 .section {
@@ -189,28 +202,27 @@ p {
 }
 
 .btn--primary {
-  background: rgba(47, 128, 255, 0.88);
-  border: 1px solid rgba(138, 184, 255, 0.24);
+  background: linear-gradient(180deg, rgba(22, 32, 52, 0.96), rgba(10, 16, 28, 0.96));
+  border: 1px solid rgba(91, 140, 255, 0.18);
   color: #f5f7fb;
-  box-shadow: inset 0 1px 0 rgba(245, 247, 251, 0.1), 0 10px 30px rgba(47, 128, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 30px rgba(0, 0, 0, 0.32);
+  transition: all 0.35s ease;
 }
 .btn--primary:hover {
-  background: #2f80ff;
-  border-color: rgba(138, 184, 255, 0.38);
-  transform: translateY(-3px);
+  border-color: rgba(91, 140, 255, 0.38);
+  background: linear-gradient(180deg, rgb(28, 40, 66), rgb(14, 20, 36));
 }
 
 .btn--ghost {
   background: rgba(245, 247, 251, 0.035);
   border: 1px solid rgba(245, 247, 251, 0.16);
-  color: rgba(245, 247, 251, 0.86);
   backdrop-filter: blur(10px);
+  color: #f5f7fb;
 }
 .btn--ghost:hover {
   background: rgba(245, 247, 251, 0.07);
   border-color: rgba(245, 247, 251, 0.28);
   color: #f5f7fb;
-  transform: translateY(-3px);
 }
 
 .floating-booking {
@@ -220,7 +232,7 @@ p {
   bottom: 0;
   z-index: 999;
   min-height: 82px;
-  background: linear-gradient(90deg, rgba(1, 3, 8, 0.78), rgba(2, 5, 12, 0.54), rgba(47, 128, 255, 0.16));
+  background: linear-gradient(90deg, rgba(7, 11, 18, 0.78), rgba(2, 5, 12, 0.54), rgba(56, 150, 239, 0.16));
   border-top: 1px solid rgba(245, 247, 251, 0.1);
   backdrop-filter: blur(22px);
   transition: min-height 0.45s ease, background 0.45s ease, backdrop-filter 0.45s ease;
@@ -292,7 +304,7 @@ p {
 .floating-booking.is-expanded {
   top: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top right, rgba(47, 128, 255, 0.18), transparent 36%), rgba(1, 3, 8, 0.94);
+  background: radial-gradient(circle at top right, rgba(56, 150, 239, 0.18), transparent 36%), rgba(7, 11, 18, 0.94);
   backdrop-filter: blur(28px);
 }
 .floating-booking.is-expanded .floating-booking__inner {
@@ -349,7 +361,7 @@ p {
   cursor: pointer;
 }
 .floating-booking__purpose input {
-  accent-color: #2f80ff;
+  accent-color: #3896ef;
 }
 .floating-booking__fields {
   display: grid;
@@ -370,8 +382,8 @@ input:not([type=radio]):not([type=checkbox]),
 textarea {
   width: 100%;
   border-radius: 4px;
-  border: 1px solid rgba(245, 247, 251, 0.12);
-  background: rgba(245, 247, 251, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: #f5f7fb;
   font-family: inherit;
   font-size: 14px;
@@ -381,7 +393,7 @@ textarea {
 }
 input:not([type=radio]):not([type=checkbox])::placeholder,
 textarea::placeholder {
-  color: rgba(245, 247, 251, 0.48);
+  color: #97a3b7;
 }
 input:not([type=radio]):not([type=checkbox]):focus,
 textarea:focus {
@@ -405,10 +417,8 @@ textarea {
   z-index: 1000;
   background: linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 0.88));
   border-bottom: 1px solid rgba(245, 247, 251, 0.05);
-  color: rgba(245, 247, 251, 0.64);
   backdrop-filter: blur(18px);
   font-size: 13px;
-  color: #97a3b7;
 }
 .topbar__inner {
   width: 100%;
@@ -490,7 +500,7 @@ textarea {
   color: #8ab8ff;
 }
 .topbar__booking:hover {
-  background: rgba(47, 128, 255, 0.12);
+  background: rgba(56, 150, 239, 0.12);
   border-color: rgba(138, 184, 255, 0.28);
   color: #f5f7fb;
 }
@@ -561,7 +571,7 @@ textarea {
   transition: 0.25s ease;
 }
 .header__nav a:hover {
-  color: #2f80ff;
+  color: #3896ef;
 }
 .header .btn--primary {
   min-height: 40px;
@@ -646,7 +656,7 @@ textarea {
 }
 .hero__highlight p {
   margin-top: 10px;
-  color: rgba(245, 247, 251, 0.52);
+  color: #c7d0de;
   font-size: 12px !important;
   line-height: 1.5;
   font-weight: 400;
@@ -654,7 +664,6 @@ textarea {
 }
 .hero__highlight-number {
   display: block;
-  color: rgba(245, 247, 251, 0.98);
   font-family: "Red Hat Display", sans-serif;
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 300;
@@ -670,7 +679,6 @@ textarea {
   margin: 18px 0 26px;
 }
 .hero p {
-  color: #f5f7fb;
   font-size: 20px;
   line-height: 1.7;
 }
@@ -943,8 +951,8 @@ textarea {
   max-width: 440px;
 }
 .services__intro p {
+  color: #c7d0de;
   margin-bottom: 28px;
-  color: rgba(245, 247, 251, 0.66);
   font-size: 18px;
   font-weight: 300;
   line-height: 1.7;
@@ -972,7 +980,7 @@ textarea {
   gap: 24px;
   border: 1px solid rgba(245, 247, 251, 0.08);
   border-radius: 4px;
-  background: linear-gradient(90deg, rgba(245, 247, 251, 0.035), rgba(47, 128, 255, 0.035));
+  background: linear-gradient(90deg, rgba(245, 247, 251, 0.035), rgba(56, 150, 239, 0.035));
 }
 @media (min-width: 1024px) {
   .services__benefits {
@@ -987,16 +995,15 @@ textarea {
   gap: 16px;
 }
 .services__benefit-icon {
-  color: #2f80ff;
+  color: #3896ef;
 }
 .services__benefit h3 {
   margin-bottom: 6px;
-  color: rgba(245, 247, 251, 0.9);
   font-size: 15px;
   font-weight: 500;
 }
 .services__benefit p {
-  color: rgba(245, 247, 251, 0.56);
+  color: #97a3b7;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -1057,6 +1064,9 @@ textarea {
 .service-card:hover::after {
   opacity: 1;
 }
+.service-card:hover .service-card__icon {
+  opacity: 0.8;
+}
 .service-card__icon {
   position: relative;
   z-index: 2;
@@ -1065,11 +1075,12 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(138, 184, 255, 0.28);
+  border: 1px solid rgba(138, 184, 255, 0.14);
   border-radius: 4px;
-  color: #2f80ff;
+  color: #8ab8ff;
   opacity: 0.5;
-  background: rgba(47, 128, 255, 0.055);
+  background: rgba(138, 184, 255, 0.055);
+  transition: 0.25s ease;
 }
 .service-card__icon img {
   width: 24px;
@@ -1083,13 +1094,12 @@ textarea {
 }
 .service-card h3 {
   margin-bottom: 16px;
-  color: rgba(245, 247, 251, 0.96);
   font-size: clamp(28px, 3vw, 32px);
   font-weight: 400;
   line-height: 1;
 }
 .service-card p {
-  color: rgba(245, 247, 251, 0.64);
+  color: #c7d0de;
   font-size: 15px;
   font-weight: 300;
   line-height: 1.6;
@@ -1131,7 +1141,7 @@ textarea {
 }
 .before-after__text {
   margin-top: 28px;
-  color: rgba(245, 247, 251, 0.66);
+  color: #c7d0de;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.7;
@@ -1143,7 +1153,7 @@ textarea {
   gap: 24px;
   border-radius: 4px;
   border: 1px solid rgba(245, 247, 251, 0.08);
-  background: linear-gradient(90deg, rgba(245, 247, 251, 0.035), rgba(47, 128, 255, 0.035));
+  background: linear-gradient(90deg, rgba(245, 247, 251, 0.035), rgba(56, 150, 239, 0.035));
 }
 @media (min-width: 768px) {
   .before-after__projects {
@@ -1152,13 +1162,12 @@ textarea {
 }
 @media (min-width: 1024px) {
   .before-after__projects {
-    grid-template-columns: 1.15fr repeat(4, 1fr);
+    grid-template-columns: 1.15fr repeat(3, 1fr);
     align-items: start;
   }
 }
 .before-after__projects-head h3 {
   margin: 18px 0 14px;
-  color: rgba(245, 247, 251, 0.94);
   font-family: "Red Hat Display", sans-serif;
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 300;
@@ -1166,7 +1175,7 @@ textarea {
   letter-spacing: -0.055em;
 }
 .before-after__projects-head p:not(.eyebrow) {
-  color: rgba(245, 247, 251, 0.58);
+  color: #97a3b7;
   font-size: 15px;
   line-height: 1.6;
 }
@@ -1249,12 +1258,11 @@ textarea {
   left: 28px;
   background: rgba(245, 247, 251, 0.035);
   border: 1px solid rgba(245, 247, 251, 0.16);
-  color: rgba(245, 247, 251, 0.86);
   backdrop-filter: blur(10px);
 }
 .comparison__label--after {
   right: 28px;
-  background: #2f80ff;
+  background: #3896ef;
 }
 
 .project-card {
@@ -1269,19 +1277,18 @@ textarea {
 }
 .project-card h4 {
   margin-top: 14px;
-  color: rgba(245, 247, 251, 0.9);
   font-size: 15px;
   font-weight: 500;
 }
 .project-card span {
   display: inline-block;
   margin-top: 8px;
-  color: #8ab8ff;
+  color: #3896ef;
   font-size: 13px;
 }
 
 .about {
-  background: radial-gradient(circle at left center, rgba(47, 128, 255, 0.08), transparent 36%), #02060d;
+  background: radial-gradient(circle at left center, rgba(56, 150, 239, 0.08), transparent 36%), #02060d;
 }
 .about__inner {
   width: 100%;
@@ -1325,7 +1332,7 @@ textarea {
   object-fit: cover;
   border-radius: 4px;
   border: 1px solid rgba(245, 247, 251, 0.08);
-  filter: grayscale(0.8) brightness(0.72) contrast(1.08);
+  filter: grayscale(0.4) brightness(0.78) contrast(1.08);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
 }
 .about__image--main {
@@ -1359,7 +1366,7 @@ textarea {
   margin-top: 42px;
 }
 .about__text p {
-  color: rgba(245, 247, 251, 0.64);
+  color: #c7d0de;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.75;

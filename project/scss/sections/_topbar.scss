@@ -6,10 +6,8 @@
   z-index: 1000;
   background: linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 0.88));
   border-bottom: 1px solid rgba($color-white, 0.05);
-  color: rgba($color-white, 0.64);
   backdrop-filter: blur(18px);
   font-size: 13px;
-  color: $color-gray;
 
   &__inner {
     @include container;

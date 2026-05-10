@@ -26,31 +26,34 @@
 }
 
 .btn--primary {
-  background: rgba($color-blue, 0.88);
-  border: 1px solid rgba($color-blue-soft, 0.24);
-  color: $color-white;
+  background: linear-gradient(180deg, rgba(22, 32, 52, 0.96), rgba(10, 16, 28, 0.96));
+
+  border: 1px solid rgba(91, 140, 255, 0.18);
+
+  color: #f5f7fb;
 
   box-shadow:
-    inset 0 1px 0 rgba($color-white, 0.1),
-    0 10px 30px rgba($color-blue, 0.14);
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 10px 30px rgba(0, 0, 0, 0.32);
+
+  transition: all 0.35s ease;
 
   &:hover {
-    background: rgba($color-blue, 1);
-    border-color: rgba($color-blue-soft, 0.38);
-    transform: translateY(-3px);
+    border-color: rgba(91, 140, 255, 0.38);
+
+    background: linear-gradient(180deg, rgba(28, 40, 66, 1), rgba(14, 20, 36, 1));
   }
 }
 
 .btn--ghost {
   background: rgba($color-white, 0.035);
   border: 1px solid rgba($color-white, 0.16);
-  color: rgba($color-white, 0.86);
   backdrop-filter: blur(10px);
+  color: $color-white;
 
   &:hover {
     background: rgba($color-white, 0.07);
     border-color: rgba($color-white, 0.28);
     color: $color-white;
-    transform: translateY(-3px);
   }
 }

@@ -28,7 +28,7 @@
 
   &__text {
     margin-top: 28px;
-    color: rgba($color-white, 0.66);
+    color: $color-gray-light;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.7;
@@ -51,7 +51,7 @@
     }
 
     @include desktop {
-      grid-template-columns: 1.15fr repeat(4, 1fr);
+      grid-template-columns: 1.15fr repeat(3, 1fr);
       align-items: start;
     }
   }
@@ -59,7 +59,6 @@
   &__projects-head {
     h3 {
       margin: 18px 0 14px;
-      color: rgba($color-white, 0.94);
       font-family: $font-heading;
       font-size: clamp(28px, 3vw, 42px);
       font-weight: 300;
@@ -68,7 +67,7 @@
     }
 
     p:not(.eyebrow) {
-      color: rgba($color-white, 0.58);
+      color: $color-gray;
       font-size: 15px;
       line-height: 1.6;
     }
@@ -174,7 +173,6 @@
       left: 28px;
       background: rgba(245, 247, 251, 0.035);
       border: 1px solid rgba(245, 247, 251, 0.16);
-      color: rgba(245, 247, 251, 0.86);
       backdrop-filter: blur(10px);
     }
 
@@ -200,7 +198,6 @@
   h4 {
     margin-top: 14px;
 
-    color: rgba($color-white, 0.9);
     font-size: 15px;
     font-weight: 500;
   }
@@ -209,7 +206,7 @@
     display: inline-block;
     margin-top: 8px;
 
-    color: $color-blue-soft;
+    color: $color-blue;
     font-size: 13px;
   }
 }

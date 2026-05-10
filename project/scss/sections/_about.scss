@@ -36,7 +36,7 @@
     border-radius: $radius-sm;
     border: 1px solid rgba($color-white, 0.08);
 
-    filter: grayscale(0.8) brightness(0.72) contrast(1.08);
+    filter: grayscale(0.4) brightness(0.78) contrast(1.08);
 
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
   }
@@ -81,7 +81,7 @@
     margin-top: 42px;
 
     p {
-      color: rgba($color-white, 0.64);
+      color: $color-gray-light;
       font-size: 18px;
       font-weight: 300;
       line-height: 1.75;

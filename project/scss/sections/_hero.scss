@@ -81,7 +81,7 @@
 
     p {
       margin-top: 10px;
-      color: rgba($color-white, 0.52);
+      color: $color-gray-light;
       font-size: 12px !important;
       line-height: 1.5;
       font-weight: 400;
@@ -92,8 +92,6 @@
 
   &__highlight-number {
     display: block;
-
-    color: rgba($color-white, 0.98);
 
     font-family: $font-heading;
 
@@ -113,7 +111,6 @@
   }
 
   p {
-    color: $color-white;
     font-size: 20px;
     line-height: 1.7;
   }
