@@ -22,11 +22,6 @@ h3,
   font-weight: 500;
 }
 
-h1,
-.section__title {
-  letter-spacing: -0.05em;
-}
-
 p {
   font-weight: 300;
 }
@@ -53,8 +48,8 @@ p {
   }
 
   &__head {
-    max-width: 760px;
-    margin-bottom: 60px;
+    /* max-width: 760px; */
+    margin-bottom: 80px;
   }
 
   &__title {

@@ -54,11 +54,6 @@ h3,
   font-weight: 500;
 }
 
-h1,
-.section__title {
-  letter-spacing: -0.05em;
-}
-
 p {
   font-weight: 300;
 }
@@ -106,8 +101,8 @@ p {
   }
 }
 .section__head {
-  max-width: 760px;
-  margin-bottom: 60px;
+  /* max-width: 760px; */
+  margin-bottom: 80px;
 }
 .section__title {
   font-family: "Red Hat Display", sans-serif;
@@ -209,7 +204,6 @@ p {
   background: rgba(245, 247, 251, 0.035);
   border: 1px solid rgba(245, 247, 251, 0.16);
   color: rgba(245, 247, 251, 0.86);
-  gap: 10px;
   backdrop-filter: blur(10px);
 }
 .btn--ghost:hover {
@@ -219,43 +213,6 @@ p {
   transform: translateY(-3px);
 }
 
-/* .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  min-height: 48px;
-  padding: 0 30px;
-  border-radius: $radius-full;
-  font-family: $font-main;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  cursor: pointer;
-  transition: $transition;
-
-  &--primary {
-    background: $color-blue;
-    color: $color-white;
-
-    &:hover {
-      background: $color-blue-soft;
-      transform: translateY(-2px);
-    }
-  }
-
-  &--ghost {
-    border: 1px solid rgba($color-white, 0.35);
-    color: $color-white;
-    background: transparent;
-
-    &:hover {
-      border-color: $color-blue-soft;
-      color: $color-blue-soft;
-      transform: translateY(-2px);
-    }
-  }
-} */
 .floating-booking {
   position: fixed;
   left: 0;
@@ -310,29 +267,6 @@ p {
   grid-template-columns: minmax(280px, 420px) 36px;
   gap: 14px;
   align-items: center;
-}
-.floating-booking__email,
-.floating-booking input,
-.floating-booking textarea {
-  width: 100%;
-  min-height: 43px;
-  padding: 0 18px;
-  border-radius: 4px;
-  background: rgba(245, 247, 251, 0.08);
-  border: 1px solid rgba(245, 247, 251, 0.12);
-  color: #f5f7fb;
-}
-.floating-booking__email::placeholder,
-.floating-booking input::placeholder,
-.floating-booking textarea::placeholder {
-  color: rgba(245, 247, 251, 0.48);
-  font-size: 14px;
-}
-.floating-booking__email:focus,
-.floating-booking input:focus,
-.floating-booking textarea:focus {
-  border-color: #8ab8ff;
-  background: rgba(245, 247, 251, 0.12);
 }
 .floating-booking__close {
   width: 36px;
@@ -396,7 +330,7 @@ p {
 .floating-booking__purpose {
   margin-bottom: 22px;
   padding: 20px;
-  border-radius: 24px;
+  border-radius: 4px;
   background: rgba(245, 247, 251, 0.05);
   border: 1px solid rgba(245, 247, 251, 0.08);
 }
@@ -415,29 +349,55 @@ p {
   cursor: pointer;
 }
 .floating-booking__purpose input {
-  width: 16px;
-  height: 16px;
-  min-height: auto;
-  padding: 0;
   accent-color: #2f80ff;
 }
 .floating-booking__fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 20px;
 }
 .floating-booking__fields textarea {
   grid-column: 1/-1;
-  min-height: 120px;
-  padding: 18px;
-  border-radius: 24px;
-  resize: vertical;
 }
 .floating-booking__actions {
   display: flex;
   justify-content: center;
   gap: 14px;
   margin-top: 26px;
+}
+
+input:not([type=radio]):not([type=checkbox]),
+textarea {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(245, 247, 251, 0.12);
+  background: rgba(245, 247, 251, 0.08);
+  color: #f5f7fb;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+input:not([type=radio]):not([type=checkbox])::placeholder,
+textarea::placeholder {
+  color: rgba(245, 247, 251, 0.48);
+}
+input:not([type=radio]):not([type=checkbox]):focus,
+textarea:focus {
+  border-color: #8ab8ff;
+  background: rgba(245, 247, 251, 0.12);
+}
+
+input:not([type=radio]):not([type=checkbox]) {
+  min-height: 43px;
+  padding: 0 18px;
+}
+
+textarea {
+  min-height: 120px;
+  padding: 18px;
+  resize: vertical;
 }
 
 .topbar {
@@ -965,7 +925,6 @@ p {
 .services__top {
   display: grid;
   gap: 32px;
-  margin-bottom: 56px;
 }
 @media (min-width: 1024px) {
   .services__top {
@@ -1007,7 +966,7 @@ p {
   }
 }
 .services__benefits {
-  margin-top: 28px;
+  margin-top: 35px;
   padding: 24px;
   display: grid;
   grid-template-columns: 1fr;
@@ -1049,12 +1008,12 @@ p {
   padding: 28px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
   isolation: isolate;
   background-color: #02060d;
   transition: 0.25s ease;
   border-radius: 4px;
+  gap: 40px;
 }
 @media (min-width: 1024px) {
   .service-card {
@@ -1068,7 +1027,6 @@ p {
   z-index: 0;
   background: linear-gradient(90deg, rgba(1, 3, 8, 0.98) 0%, rgba(1, 3, 8, 0.92) 28%, rgba(1, 3, 8, 0.72) 52%, rgba(1, 3, 8, 0.28) 72%, rgba(1, 3, 8, 0.08) 100%), var(--bg-image);
   background-size: cover;
-  background-position: right center;
   background-repeat: no-repeat;
   filter: grayscale(70%);
   transform: scale(1);
@@ -1100,10 +1058,6 @@ p {
 .service-card:hover::after {
   opacity: 1;
 }
-.service-card:hover .service-card__arrow {
-  transform: translateX(8px);
-  color: #8ab8ff;
-}
 .service-card__icon {
   position: relative;
   z-index: 2;
@@ -1126,33 +1080,20 @@ p {
 .service-card__content {
   position: relative;
   z-index: 2;
-  max-width: 240px;
+  max-width: 75%;
 }
 .service-card h3 {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: rgba(245, 247, 251, 0.96);
-  font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(28px, 3vw, 36px);
+  font-size: clamp(28px, 3vw, 32px);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.055em;
 }
 .service-card p {
   color: rgba(245, 247, 251, 0.64);
   font-size: 15px;
   font-weight: 300;
   line-height: 1.6;
-}
-.service-card__arrow {
-  position: absolute;
-  right: 28px;
-  bottom: 28px;
-  z-index: 2;
-  color: #2f80ff;
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 1;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .before-after {
@@ -1332,6 +1273,10 @@ p {
 }
 .comparison__label--before {
   left: 28px;
+  background: rgba(245, 247, 251, 0.035);
+  border: 1px solid rgba(245, 247, 251, 0.16);
+  color: rgba(245, 247, 251, 0.86);
+  backdrop-filter: blur(10px);
 }
 .comparison__label--after {
   right: 28px;

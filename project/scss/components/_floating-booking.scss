@@ -57,38 +57,15 @@
     align-items: center;
   }
 
-  &__email,
-  input,
-  textarea {
-    width: 100%;
-
-    min-height: 43px;
-    padding: 0 18px;
-
-    border-radius: $radius-full;
-
-    background: rgba($color-white, 0.08);
-    border: 1px solid rgba($color-white, 0.12);
-
-    color: $color-white;
-
-    &::placeholder {
-      color: rgba($color-white, 0.48);
-      font-size: 14px;
-    }
-
-    &:focus {
-      border-color: $color-blue-soft;
-      background: rgba($color-white, 0.12);
-    }
-  }
-
   &__close {
     width: 36px;
     height: 36px;
+
     border-radius: 50%;
+
     background: transparent;
     color: $color-white;
+
     font-size: 24px;
     line-height: 1;
 
@@ -163,7 +140,7 @@
     margin-bottom: 22px;
     padding: 20px;
 
-    border-radius: 24px;
+    border-radius: $radius-sm;
 
     background: rgba($color-white, 0.05);
     border: 1px solid rgba($color-white, 0.08);
@@ -186,11 +163,6 @@
     }
 
     input {
-      width: 16px;
-      height: 16px;
-      min-height: auto;
-      padding: 0;
-
       accent-color: $color-blue;
     }
   }
@@ -198,16 +170,10 @@
   &__fields {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 20px;
 
     textarea {
       grid-column: 1 / -1;
-
-      min-height: 120px;
-      padding: 18px;
-
-      border-radius: 24px;
-      resize: vertical;
     }
   }
 
