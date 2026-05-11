@@ -107,7 +107,7 @@
               </div>
             </div>
             <div class="hero__actions">
-              <a href="#" class="btn btn--primary">Book a Visit</a>
+              <a href="#" class="btn btn--primary js-open-booking" type="button">Book a Visit</a>
 
               <a href="#" class="btn btn--ghost">View Services</a>
             </div>
@@ -513,10 +513,7 @@
 
             <p class="reviews__source">Based on 200+ reviews on Google Maps</p>
 
-            <a href="#" class="btn btn--ghost">
-              View on Google Maps
-              <span>→</span>
-            </a>
+            <a href="#" class="btn btn--ghost">View on Google Maps</a>
           </div>
 
           <div class="reviews__grid">
@@ -584,57 +581,133 @@
       </section>
 
       <!-- 09. Car Brands -->
-      <!-- <section class="brands section">
-        <div class="brands__wrapper">
-          <div class="section__head">
-            <p class="eyebrow">Car Brands</p>
-            <h2 class="section__title">Працюємо з різними марками авто</h2>
+      <section class="brands section" id="brands">
+        <div class="brands__inner">
+          <div class="brands__grid">
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+
+            <div class="brand-card">
+              <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
+            </div>
+          </div>
+          <div class="brands__content">
+            <p class="eyebrow">Brands We Service</p>
+
+            <h2 class="section__title">We work with all major brands</h2>
+
+            <p>Our specialists have experience with a wide range of makes and models.</p>
           </div>
 
-          <div class="brands__list">
-            <span class="brands__item">BMW</span>
-            <span class="brands__item">Mercedes-Benz</span>
-            <span class="brands__item">Audi</span>
-            <span class="brands__item">Volkswagen</span>
-            <span class="brands__item">Toyota</span>
-            <span class="brands__item">Lexus</span>
-            <span class="brands__item">Porsche</span>
-            <span class="brands__item">Tesla</span>
+          <div class="brands__actions">
+            <a href="./brands.html" class="btn btn--ghost">See All Brands</a>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- 11. Service Process -->
-      <!-- <section class="process section">
-        <div class="process__wrapper">
-          <div class="section__head">
-            <p class="eyebrow">Process</p>
-            <h2 class="section__title">Як проходить сервіс</h2>
+      <section class="process section" id="process" data-step="form">
+        <div class="process__inner">
+          <div class="process__visual">
+            <div class="process__image">
+              <img src="./images/process/process-car.png" alt="Car in premium service garage" />
+
+              <div class="process__overlay process__overlay--form">
+                <span>Quick request</span>
+                <div></div>
+                <div></div>
+                <button type="button">Send request</button>
+              </div>
+
+              <div class="process__overlay process__overlay--diagnostics">
+                <span>Diagnostic system</span>
+                <p>Scan in progress...</p>
+                <ul>
+                  <li>Engine — OK</li>
+                  <li>Brakes — OK</li>
+                  <li>Suspension — Check</li>
+                </ul>
+              </div>
+
+              <div class="process__overlay process__overlay--repair">
+                <span>Service mode</span>
+                <p>Repair in progress</p>
+              </div>
+
+              <div class="process__scan process__scan--vertical"></div>
+              <div class="process__scan process__scan--horizontal"></div>
+              <div class="process__headlights"></div>
+            </div>
           </div>
 
-          <div class="grid grid--4">
-            <article class="card">
-              <h3>01. Заявка</h3>
-              <p>Ви залишаєте контакти або телефонуєте нам.</p>
-            </article>
+          <div class="process__content">
+            <p class="eyebrow">How We Work</p>
 
-            <article class="card">
-              <h3>02. Діагностика</h3>
-              <p>Ми перевіряємо авто та визначаємо необхідні роботи.</p>
-            </article>
+            <h2 class="section__title">How to use our services?</h2>
 
-            <article class="card">
-              <h3>03. Ремонт</h3>
-              <p>Виконуємо роботи після погодження вартості.</p>
-            </article>
+            <p class="process__lead">A simple process, full care and the highest quality at every stage.</p>
 
-            <article class="card">
-              <h3>04. Видача</h3>
-              <p>Передаємо авто та пояснюємо результат.</p>
-            </article>
+            <div class="process__timeline">
+              <article class="process-step is-active" data-step="form">
+                <span class="process-step__number">01</span>
+                <div>
+                  <h3>Form</h3>
+                  <p>Leave your details and describe the problem with your car.</p>
+                </div>
+              </article>
+
+              <article class="process-step" data-step="diagnostics">
+                <span class="process-step__number">02</span>
+                <div>
+                  <h3>Diagnostics</h3>
+                  <p>We check the car and inform you about the scope of work.</p>
+                </div>
+              </article>
+
+              <article class="process-step" data-step="repair">
+                <span class="process-step__number">03</span>
+                <div>
+                  <h3>Repair</h3>
+                  <p>You leave your car at the service center or wait there.</p>
+                </div>
+              </article>
+
+              <article class="process-step" data-step="pickup">
+                <span class="process-step__number">04</span>
+                <div>
+                  <h3>Reception</h3>
+                  <p>You receive the finished car along with information about.</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- 12. FAQ -->
       <!-- <section class="faq section" id="faq">
@@ -833,6 +906,25 @@
           handle.style.left = `${clamped}%`;
         });
       }
+
+      const processSection = document.querySelector(".process");
+      const processSteps = document.querySelectorAll(".process-step");
+
+      processSteps.forEach((step) => {
+        step.addEventListener("mouseenter", () => {
+          processSteps.forEach((item) => item.classList.remove("is-active"));
+
+          step.classList.add("is-active");
+          processSection.dataset.step = step.dataset.step;
+        });
+
+        step.addEventListener("click", () => {
+          processSteps.forEach((item) => item.classList.remove("is-active"));
+
+          step.classList.add("is-active");
+          processSection.dataset.step = step.dataset.step;
+        });
+      });
     </script>
   </body>
 </html>
