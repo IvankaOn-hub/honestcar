@@ -81,14 +81,9 @@
   }
 
   &__booking {
-    min-height: 32px;
+    min-height: 28px;
     padding: 0 16px;
-
-    border: 1px solid rgba($color-white, 0.1);
-    border-radius: 4px;
-
-    background: rgba($color-white, 0.03);
-    color: $color-blue-soft;
+    font-size: 12px;
 
     &:hover {
       background: rgba($color-blue, 0.12);

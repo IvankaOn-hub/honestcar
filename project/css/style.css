@@ -492,12 +492,9 @@ textarea {
   color: #f5f7fb;
 }
 .topbar__booking {
-  min-height: 32px;
+  min-height: 28px;
   padding: 0 16px;
-  border: 1px solid rgba(245, 247, 251, 0.1);
-  border-radius: 4px;
-  background: rgba(245, 247, 251, 0.03);
-  color: #8ab8ff;
+  font-size: 12px;
 }
 .topbar__booking:hover {
   background: rgba(56, 150, 239, 0.12);
@@ -672,7 +669,7 @@ textarea {
 }
 .hero h1 {
   font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(48px, 7vw, 96px);
+  font-size: clamp(48px, 7vw, 86px);
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.055em;
