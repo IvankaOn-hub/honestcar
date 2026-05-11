@@ -112,6 +112,7 @@
   min-height: 280px;
   padding: 28px;
   display: flex;
+  justify-content: end;
   flex-direction: column;
   overflow: hidden;
   isolation: isolate;
@@ -189,12 +190,12 @@
     &::after {
       opacity: 1;
     }
-    & .service-card__icon {
+    /* & .service-card__icon {
       opacity: 0.8;
-    }
+    } */
   }
 
-  &__icon {
+  /*  &__icon {
     position: relative;
     z-index: 2;
 
@@ -217,7 +218,7 @@
       height: 24px;
       display: block;
     }
-  }
+  } */
 
   &__content {
     position: relative;

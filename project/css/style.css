@@ -1013,6 +1013,7 @@ textarea {
   min-height: 280px;
   padding: 28px;
   display: flex;
+  justify-content: end;
   flex-direction: column;
   overflow: hidden;
   isolation: isolate;
@@ -1064,28 +1065,36 @@ textarea {
 .service-card:hover::after {
   opacity: 1;
 }
-.service-card:hover .service-card__icon {
-  opacity: 0.8;
+.service-card:hover {
+  /* & .service-card__icon {
+    opacity: 0.8;
+  } */
 }
-.service-card__icon {
-  position: relative;
-  z-index: 2;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(138, 184, 255, 0.14);
-  border-radius: 4px;
-  color: #8ab8ff;
-  opacity: 0.5;
-  background: rgba(138, 184, 255, 0.055);
-  transition: 0.25s ease;
-}
-.service-card__icon img {
-  width: 24px;
-  height: 24px;
-  display: block;
+.service-card {
+  /*  &__icon {
+    position: relative;
+    z-index: 2;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba($color-blue-soft, 0.14);
+    border-radius: 4px;
+    color: $color-blue-soft;
+    opacity: 0.5;
+    background: rgba($color-blue-soft, 0.055);
+    transition: $transition;
+
+    img {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+  } */
 }
 .service-card__content {
   position: relative;
@@ -1279,12 +1288,6 @@ textarea {
   margin-top: 14px;
   font-size: 15px;
   font-weight: 500;
-}
-.project-card span {
-  display: inline-block;
-  margin-top: 8px;
-  color: #3896ef;
-  font-size: 13px;
 }
 
 .about {
