@@ -4,7 +4,7 @@
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 9999;
   min-height: 37px;
   background: linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 0.88));
   border-bottom: 1px solid rgba($color-white, 0.05);
