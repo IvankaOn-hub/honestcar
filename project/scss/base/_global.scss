@@ -39,6 +39,7 @@ p {
   text-transform: uppercase;
   padding-left: 2rem;
   position: relative;
+  display: inline-block;
 
   &::before {
     content: "";

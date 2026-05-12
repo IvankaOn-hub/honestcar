@@ -84,6 +84,7 @@ p {
   text-transform: uppercase;
   padding-left: 2rem;
   position: relative;
+  display: inline-block;
 }
 .eyebrow::before {
   content: "";
@@ -1715,7 +1716,7 @@ textarea {
 .process {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 18% 42%, rgba(56, 150, 239, 0.08), transparent 34%), radial-gradient(circle at 88% 20%, rgba 127, 151, 199, 0.055, transparent 28%), #02060d;
+  background: radial-gradient(circle at 18% 42%, rgba(56, 150, 239, 0.08), transparent 34%), radial-gradient(circle at 88% 20%, rgba(127, 151, 199, 0.055), transparent 28%), #02060d;
 }
 .process__inner {
   width: 100%;
@@ -2003,6 +2004,190 @@ textarea {
   50% {
     top: 58%;
   }
+}
+.faq {
+  /* background:
+    radial-gradient(circle at left center, rgba($color-blue, 0.055), transparent 32%),
+    $color-black; */
+  background: linear-gradient(90deg, rgba(1, 3, 8, 0.98) 0%, rgba(1, 3, 8, 0.92) 45%, rgba(1, 3, 8, 0.76) 100%), url("../images/faq/faq.png");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.faq__inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .faq__inner {
+    padding: 0 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .faq__inner {
+    padding: 0 56px;
+  }
+}
+.faq__inner {
+  display: grid;
+  gap: 48px;
+}
+@media (min-width: 1024px) {
+  .faq__inner {
+    grid-template-columns: 0.35fr 0.65fr;
+    align-items: start;
+    gap: 72px;
+  }
+}
+.faq .section__title {
+  margin-top: 18px;
+  max-width: 9ch;
+}
+.faq__accordion {
+  border-radius: 4px;
+  border: 1px solid rgba(245, 247, 251, 0.06);
+  background: linear-gradient(180deg, rgba(245, 247, 251, 0.026), rgba(245, 247, 251, 0.012));
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(245, 247, 251, 0.06);
+}
+.faq-item:last-child {
+  border-bottom: 0;
+}
+.faq-item summary {
+  min-height: 72px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  cursor: pointer;
+  list-style: none;
+  color: rgba(245, 247, 251, 0.86);
+  font-size: 17px;
+  font-weight: 400;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary span {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+.faq-item summary span::before, .faq-item summary span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 1px;
+  background: rgba(127, 151, 199, 0.8);
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease;
+}
+.faq-item summary span::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.faq-item summary:hover {
+  color: rgba(245, 247, 251, 0.96);
+  background: rgba(245, 247, 251, 0.018);
+}
+.faq-item p {
+  max-width: 720px;
+  padding: 0 28px 28px;
+  color: rgba(245, 247, 251, 0.58);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.faq-item[open] {
+  background: linear-gradient(180deg, rgba(127, 151, 199, 0.04), rgba(245, 247, 251, 0.008));
+}
+.faq-item[open] summary {
+  color: rgba(245, 247, 251, 0.94);
+}
+.faq-item[open] summary span::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.seo-block {
+  position: relative;
+  overflow: hidden;
+}
+.seo-block__inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .seo-block__inner {
+    padding: 0 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .seo-block__inner {
+    padding: 0 56px;
+  }
+}
+.seo-block .section__title {
+  max-width: 25ch;
+}
+.seo-block__text {
+  margin-top: 40px;
+  position: relative;
+  color: rgba(245, 247, 251, 0.66);
+  line-height: 1.9;
+  transition: max-height 0.5s ease;
+}
+.seo-block__text p + p {
+  margin-top: 22px;
+}
+.seo-block__text.is-collapsed {
+  max-height: 185px;
+  overflow: hidden;
+}
+.seo-block__toggle {
+  margin-top: 34px;
+  /*  display: inline-flex;
+   align-items: center;
+   gap: 10px;
+
+   padding: 14px 24px;
+
+   border: 1px solid rgba($color-white, 0.1);
+   border-radius: 4px;
+
+   background: rgba($color-white, 0.03);
+
+   color: rgba($color-white, 0.92);
+
+   font-size: 13px;
+   font-weight: 500;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+
+   cursor: pointer;
+
+   transition:
+     border-color 0.3s ease,
+     background 0.3s ease,
+     transform 0.3s ease;
+
+   &:hover {
+     border-color: rgba($color-blue-soft, 0.3);
+
+     background: rgba($color-blue, 0.08);
+
+     transform: translateY(-2px);
+   } */
 }
 
 /*# sourceMappingURL=style.css.map */

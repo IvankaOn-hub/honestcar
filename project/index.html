@@ -710,40 +710,122 @@
       </section>
 
       <!-- 12. FAQ -->
-      <!-- <section class="faq section" id="faq">
-        <div class="faq__wrapper">
-          <div class="section__head">
-            <p class="eyebrow">FAQ</p>
-            <h2 class="section__title">Поширені питання</h2>
-          </div>
+      <section class="faq section" id="faq">
+      <div class="faq__inner">
+        <div class="faq__content">
+          <p class="eyebrow">FAQ</p>
 
-          <div class="faq__item">
-            <h3>Чи можна приїхати без запису?</h3>
-            <p>Так, але для швидкого обслуговування краще попередньо записатися.</p>
-          </div>
+          <h2 class="section__title">
+            Frequently asked questions
+          </h2>
 
-          <div class="faq__item">
-            <h3>Чи погоджуєте ви вартість перед ремонтом?</h3>
-            <p>Так, ми починаємо роботи тільки після погодження кошторису з клієнтом.</p>
-          </div>
-
-          <div class="faq__item">
-            <h3>З якими авто ви працюєте?</h3>
-            <p>Ми обслуговуємо популярні європейські, японські, корейські та електричні авто.</p>
-          </div>
         </div>
-      </section> -->
+
+        <div class="faq__accordion">
+          <details class="faq-item" open>
+            <summary>
+              How long does a typical repair take?
+              <span></span>
+            </summary>
+
+            <p>
+              The time depends on the type of repair. Most services are completed the same day, but we always give you an estimated time after diagnostics.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do you use OEM parts?
+              <span></span>
+            </summary>
+
+            <p>
+              We use OEM or high-quality equivalent parts, depending on your preference and the repair requirements.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do you offer a warranty?
+              <span></span>
+            </summary>
+
+            <p>
+              Yes, most repairs are covered by warranty. We explain warranty details before starting the work.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Can I wait at your service center?
+              <span></span>
+            </summary>
+
+            <p>
+              Yes, you can wait on site for selected services. For longer repairs, you can leave the car with us.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              How much will the repair cost?
+              <span></span>
+            </summary>
+
+            <p>
+              We provide a clear estimate after checking the car. No hidden costs — we confirm the scope before any repair.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
 
       <!-- 13. SEO Text -->
-      <!-- <section class="seo-text section">
-        <div class="seo-text__wrapper">
-          <h2>Преміум СТО для якісного обслуговування автомобіля</h2>
-          <p>
-            Наш автосервіс пропонує професійну діагностику, технічне обслуговування, ремонт ходової частини, електроніки, гальмівної системи
-            та комплексний догляд за автомобілем. Ми працюємо для водіїв, які цінують якість, прозорість і комфорт.
-          </p>
+      <section class="section seo-block" id="seo">
+      <div class="seo-block__inner">
+                <div class="seo-block__card">
+          <div class="seo-block__content">
+            <p class="eyebrow">About our service</p>
+
+            <h2 class="section__title">
+              Professional car service with an honest approach.
+            </h2>
+
+            <div class="seo-block__text is-collapsed" id="seoText">
+              <p>
+                Honest Car Service provides premium automotive diagnostics,
+                repairs and maintenance for modern vehicles in Warsaw.
+                We combine dealership-level precision with a transparent,
+                client-focused experience.
+              </p>
+
+              <p>
+                Our workshop specializes in diagnostics, suspension repair,
+                brake systems, drivetrain service and complex engine repairs.
+                Every vehicle is inspected using modern equipment and OEM-grade
+                procedures.
+              </p>
+
+              <p>
+                We focus on quality workmanship, clear communication and
+                attention to detail. Clients receive full information about
+                performed work, estimated timelines and recommended solutions.
+              </p>
+
+              <p>
+                Whether you need routine maintenance or advanced diagnostics,
+                our experienced technicians ensure your car receives the care
+                it deserves in a premium garage environment.
+              </p>
+            </div>
+
+            <button class="seo-block__toggle btn btn--ghost" id="seoToggle">
+              Read more
+            </button>
+          </div>
         </div>
-      </section> -->
+      </div>
+    </section>
 
       <!-- 14. Blog -->
       <!-- <section class="blog section">
@@ -974,6 +1056,7 @@
         });
       }
 
+      // Process Working
       const processSection = document.querySelector(".process");
       const processSteps = document.querySelectorAll(".process-step");
 
@@ -991,6 +1074,18 @@
           step.classList.add("is-active");
           processSection.dataset.step = step.dataset.step;
         });
+      });
+
+      // SEO READ MORE
+      const seoToggle = document.getElementById("seoToggle");
+      const seoText = document.getElementById("seoText");
+
+      seoToggle?.addEventListener("click", () => {
+        seoText.classList.toggle("is-collapsed");
+
+        seoToggle.textContent = seoText.classList.contains("is-collapsed")
+          ? "Read more"
+          : "Show less";
       });
     </script>
   </body>
