@@ -437,8 +437,10 @@ textarea {
 }
 
 .topbar {
-  position: relative;
-  z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 37px;
   background: linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 0.88));
   border-bottom: 1px solid rgba(245, 247, 251, 0.05);
   backdrop-filter: blur(18px);
@@ -551,7 +553,7 @@ textarea {
 
 .header {
   position: sticky;
-  top: 0;
+  top: 37px;
   z-index: 100;
   background: linear-gradient(180deg, rgba(2, 6, 13, 0.92), rgba(2, 6, 13, 0.72));
   border-bottom: 1px solid rgba(245, 247, 251, 0.05);
