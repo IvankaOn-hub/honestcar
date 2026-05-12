@@ -6,17 +6,17 @@
 @use "./base/utilities";
 
 @use "./components/buttons";
-@use "./components/floating-booking";
+@use "./components/floating-booking";  
 @use "./components/input";
-
+ 
 @use "./sections/topbar";
 @use "./sections/header";
 @use "./sections/hero";
 @use "./sections/sections";
 @use "./sections/footer";
 @use "./sections/services";
-@use "./sections/before-after";
+@use "./sections/before-after";  
 @use "./sections/about";
-@use "./sections/reviews.scss";
-@use "./sections/brands.scss";
-@use "./sections/process.scss";
+@use "./sections/reviews";
+@use "./sections/brands";
+@use "./sections/process"; 
