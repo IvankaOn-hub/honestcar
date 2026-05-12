@@ -4,7 +4,10 @@
 .footer {
   padding: 72px 0 96px;
 
-  background: radial-gradient(circle at top left, rgba($color-blue, 0.055), transparent 34%), $color-black;
+  /* background: radial-gradient(circle at top left, rgba($color-blue, 0.055), transparent 34%), $color-black; */
+   background:
+    radial-gradient(circle at 20% 0%, rgba(127, 151, 199, 0.045), transparent 30%),
+    #050910;
 
   border-top: 1px solid rgba($color-white, 0.06);
 

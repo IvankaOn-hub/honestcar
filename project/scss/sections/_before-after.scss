@@ -2,6 +2,8 @@
 @use "../abstracts/mixins" as *;
 
 .before-after {
+  background: #050910;
+  
   &__inner {
     @include container;
   }

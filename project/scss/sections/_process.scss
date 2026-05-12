@@ -4,14 +4,19 @@
 .process {
   position: relative;
   overflow: hidden;
-
-  background:
+ background:
+    radial-gradient(circle at 12% 45%, rgba(127, 151, 199, 0.07), transparent 34%),
+    #050910;
+ /*  background:
     radial-gradient(circle at 18% 42%, rgba($color-blue, 0.08), transparent 34%),
-    radial-gradient(circle at 88% 20%, rgba(127, 151, 199, 0.055), transparent 28%), $color-black;
+    radial-gradient(circle at 88% 20%, rgba(127, 151, 199, 0.055), transparent 28%), $color-black; */
 
   &__inner {
     @include container;
 
+    
+  }
+  &__grid{
     display: grid;
     gap: 56px;
 
@@ -103,7 +108,7 @@
 
   &__timeline {
     display: grid;
-    gap: 16px;
+    gap: $gap-md;
     margin-top: 44px;
   }
 
@@ -357,7 +362,7 @@
     color: rgba($color-white, 0.92);
 
     font-family: $font-heading;
-    font-size: clamp(24px, 2.5vw, 34px);
+    font-size: clamp(24px, 2.5vw, 28px);
     font-weight: 400;
     line-height: 1;
     letter-spacing: -0.045em;

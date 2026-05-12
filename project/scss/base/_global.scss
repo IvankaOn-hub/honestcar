@@ -17,6 +17,8 @@ body {
 h1,
 h2,
 h3,
+h4,
+h5,
 .section-title {
   font-family: $font-heading;
   font-weight: 500;
@@ -59,12 +61,34 @@ p {
   padding: 72px 0;
 
   @include desktop {
-    padding: 120px 0;
+    padding: 130px 0;
   }
 
   &__head {
     /* max-width: 760px; */
     margin-bottom: 80px;
+  }
+
+  &__head-col{
+    display: grid;
+    margin-bottom: 60px;
+
+    @include desktop{
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: end;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+
+    &-left{
+      max-width: 720px;
+    }
+    &-right{
+      max-width: 440px;
+      & p {
+        margin-bottom: 28px;
+      }
+    }
   }
 
   &__title {

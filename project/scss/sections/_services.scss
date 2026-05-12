@@ -3,6 +3,9 @@
 
 .services {
   // background: radial-gradient(circle at top left, rgba(91, 140, 255, 0.08), transparent 32%), #070b12;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(127, 151, 199, 0.055), transparent 30%),
+    #070b12;
   position: relative;
 
   overflow: hidden;
@@ -17,7 +20,7 @@
 
   &__top {
     display: grid;
-    gap: 32px;
+    gap: $gap-xl;
 
     @include desktop {
       grid-template-columns: 1.1fr 0.9fr;
@@ -52,7 +55,7 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: $gap-xl;
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
@@ -69,7 +72,7 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: $gap-md;
 
     border: 1px solid rgba($color-white, 0.08);
     border-radius: 4px;
@@ -86,7 +89,7 @@
   &__benefit {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: $gap-sm;
 
     &-icon {
       color: $color-blue;
@@ -120,6 +123,7 @@
   transition: $transition;
   border-radius: $radius-sm;
   gap: 40px;
+      border: 1px solid rgba(245, 247, 251, 0.08);
 
   // &:first-child {
   //   grid-column: span 2;
@@ -157,7 +161,7 @@
       filter 0.6s ease;
   }
 
-  &::after {
+  /* &::after {
     content: "";
 
     position: absolute;
@@ -177,19 +181,19 @@
     opacity: 0.7;
 
     transition: opacity 0.35s ease;
-  }
+  } */
 
   &:hover {
-    border-color: rgba($color-blue-soft, 0.35);
+    border-color: rgba(127, 151, 199, 0.24);
     box-shadow: 0 26px 80px rgba(0, 0, 0, 0.38);
 
     &::before {
       transform: scale(1.06);
       filter: grayscale(0.2);
     }
-    &::after {
+    /* &::after {
       opacity: 1;
-    }
+    } */
     /* & .service-card__icon {
       opacity: 0.8;
     } */
