@@ -2374,15 +2374,6 @@ textarea {
   z-index: 2;
   max-width: 620px;
 }
-.cta-banner__content h2 {
-  margin-top: 18px;
-  color: rgba(245, 247, 251, 0.96);
-  font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(42px, 5vw, 76px);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.06em;
-}
 .cta-banner .btn {
   margin-top: 28px;
 }
