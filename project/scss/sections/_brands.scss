@@ -2,7 +2,6 @@
 @use "../abstracts/mixins" as *;
 
 .brands {
-  /* background: $color-black; */
   background: #070b12;
 
   &__inner {
@@ -28,6 +27,11 @@
       font-weight: 300;
       line-height: 1.7;
     }
+    @include desktop {
+      order: 2;
+    }
+
+    
   }
 
   .section__title {
@@ -42,6 +46,9 @@
 
     @include tablet {
       grid-template-columns: repeat(4, 1fr);
+    }
+    @include desktop {
+      order: 1;
     }
   }
 

@@ -9,6 +9,22 @@ body {
 section {
   @include section-padding;
 }
+h1{
+  @include title-h1;
+}
+h2{
+  @include title-h2;
+}
+h3{
+  @include title-h3;
+}
+h4{
+  @include title-h4;
+}
+h5{
+  @include title-h5;
+}
+
 
 .container {
   @include container;
@@ -35,7 +51,23 @@ section {
   text-transform: uppercase;
   position: relative;
   display: inline-block;
-  opacity: .5;
+}
+
+.icon-round {
+  @include flex-center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: $color-glass;
+  position: relative;
+  transition: $transition;
+  &:hover{
+    background: $color-glass-hover;
+  }
+  & img{
+    transition: $transition;
+    filter: invert(.7);
+  }
 }
 
 .section {
@@ -51,10 +83,10 @@ section {
     }
 
     &-left {
-      max-width: 720px;
+      max-width: 45ch;
     }
     &-right {
-      max-width: 440px;
+      max-width: 45ch;
       & p {
         margin-bottom: 28px;
       }
@@ -63,36 +95,44 @@ section {
 
   &__title {
     @include title-h2;
-    margin-top: 14px;
+    margin-top: 1rem;
   }
 
   &__text {
     margin-top: 20px;
     color: $color-gray;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.7;
-    max-width: 70ch;
   }
 }
 
 .grid {
   display: grid;
-  gap: 20px;
+  gap: $gap-xl;
   grid-template-columns: 1fr;
 
-  &--3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  &--4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   @include tablet {
+    
     grid-template-columns: repeat(2, 1fr);
+
+    &--3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @include desktop {
+
+    &--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
-  @include desktop {
-    grid-template-columns: repeat(4, 1fr);
-  }
+ 
 }

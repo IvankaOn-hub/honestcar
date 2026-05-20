@@ -26,6 +26,7 @@
 
     @include desktop {
       min-height: 650px;
+      order: 1;
     }
   }
 
@@ -41,6 +42,7 @@
     filter: grayscale(0.4) brightness(0.78) contrast(1.08);
 
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+
   }
 
   &__image--main {
@@ -69,12 +71,11 @@
 
   &__content {
     max-width: 650px;
+     @include desktop {
+      order: 2;
+    }
   }
 
-  .section__title {
-    margin-top: 18px;
-    max-width: 12ch;
-  }
 
   &__text {
     display: grid;
@@ -83,7 +84,6 @@
     margin-top: 42px;
 
     p {
-      color: $color-gray-light;
       font-size: 18px;
       font-weight: 300;
       line-height: 1.75;
