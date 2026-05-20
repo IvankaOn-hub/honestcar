@@ -2,30 +2,24 @@
 @use "../abstracts/mixins" as *;
 
 body {
-  font-family: $font-main;
   background: $color-navy;
-  color: $color-light;
-
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  @include body-text;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-.section-title {
-  font-family: $font-heading;
-  font-weight: 500;
+section {
+  @include section-padding;
 }
 
-p {
-  font-weight: 300;
+.container {
+  @include container;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent{
+  color: $color-blue-soft;
 }
 
 .container {
@@ -33,57 +27,33 @@ p {
 }
 
 .eyebrow {
-  color: rgba(168, 186, 214, 0.82);
+  color: $color-dark-gray;
   font-family: $font-main;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  padding-left: 2rem;
   position: relative;
   display: inline-block;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 1px;
-    width: 1.5rem;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(168, 186, 214, 0.82);
-  }
+  opacity: .5;
 }
 
 .section {
-  @include section-padding;
-  padding: 72px 0;
-
-  @include desktop {
-    padding: 130px 0;
-  }
-
   &__head {
-    /* max-width: 760px; */
-    margin-bottom: 80px;
-  }
-
-  &__head-col{
     display: grid;
-    margin-bottom: 60px;
+    gap: $gap-xl;
+    margin-bottom: 80px;
 
-    @include desktop{
+    @include desktop {
       grid-template-columns: 1.1fr 0.9fr;
       align-items: end;
       gap: 80px;
-      margin-bottom: 80px;
     }
 
-    &-left{
+    &-left {
       max-width: 720px;
     }
-    &-right{
+    &-right {
       max-width: 440px;
       & p {
         margin-bottom: 28px;
@@ -92,7 +62,7 @@ p {
   }
 
   &__title {
-    @include title-lg;
+    @include title-h2;
     margin-top: 14px;
   }
 
@@ -124,22 +94,5 @@ p {
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.card {
-  padding: 32px;
-  border-radius: $radius-md;
-  background: rgba($color-white, 0.045);
-  border: 1px solid rgba($color-white, 0.08);
-
-  h3 {
-    margin-bottom: 14px;
-    font-size: 22px;
-  }
-
-  p {
-    color: $color-gray;
-    line-height: 1.6;
   }
 }

@@ -52,7 +52,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: $gap-sm;
   }
 
   &__item {

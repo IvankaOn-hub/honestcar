@@ -3,7 +3,7 @@
 
 .header {
   position: sticky;
-  top: 37px;
+  top: 42px;
   z-index: 100;
   background: linear-gradient(180deg, rgba(2, 6, 13, 0.92), rgba(2, 6, 13, 0.72));
   border-bottom: 1px solid rgba($color-white, 0.05);
@@ -12,11 +12,11 @@
   &__wrapper {
     @include container;
     @include flex-between;
-    min-height: 82px;
+    min-height: 90px;
   }
 
   &__logo {
-    max-width: 92px;
+    max-width: 100px;
   }
 
   &__nav {
@@ -25,11 +25,11 @@
 
     a {
       color: $color-white;
-      font-size: 16px;
+      font-size: 1.125rem;
       transition: $transition;
 
       &:hover {
-        color: $color-blue;
+        color: $color-gray-light;
       }
     }
   }
