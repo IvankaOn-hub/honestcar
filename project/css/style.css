@@ -2425,7 +2425,7 @@ textarea {
 }
 
 .cta-banner {
-  background: #050608;
+  background: radial-gradient(circle at 12% 0%, rgba(127, 151, 199, 0.055), transparent 30%), #070b12;
   position: relative;
   overflow: hidden;
   padding: 0;
