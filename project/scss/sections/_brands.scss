@@ -34,11 +34,6 @@
     
   }
 
-  .section__title {
-    margin-top: 18px;
-    max-width: 9ch;
-  }
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

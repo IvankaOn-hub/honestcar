@@ -24,13 +24,11 @@
             <img class="icon" src="./images/icons/call.svg" alt="Call" />
             <span>504 367 207</span>
           </a>
-
           <a class="topbar__link" href="https://maps.app.goo.gl/PU27N4JTdbqkwk2H9" target="_blank" rel="noopener noreferrer">
             <img class="icon" src="./images/icons/location.svg" alt="Map" />
             <span>Hetmańska 47A, 04-305 Warszawa</span>
           </a>
         </div>
-
         <div class="topbar__actions">
           <div class="topbar__socials">
             <a href="#" aria-label="Instagram">
@@ -40,7 +38,6 @@
               <img src="./images/icons/facebook.svg" alt="Facebook" class="icon icon--lg" />
             </a>
           </div>
-
           <div class="lang-switcher">
             <button class="lang-switcher__current" type="button">
               PL
@@ -52,7 +49,6 @@
               <a href="#">UA</a>
             </div>
           </div>
-
           <button class="btn btn--ghost topbar__booking js-open-booking" type="button">Umów wizytę</button>
         </div>
       </div>
@@ -67,7 +63,7 @@
 
       <div class="header__actions">
         <a class="" href="tel:504367207">
-        <img class="icon" src="./images/icons/call.svg" alt="Call" />
+        <img class="icon icon--xl" src="./images/icons/call.svg" alt="Call" />
         </a>
         <div class="lang-switcher">
               <button class="lang-switcher__current" type="button">
@@ -90,7 +86,7 @@
       <div class="header__mobile">
         <nav class="header__nav">
           <a href="#services">Usługi</a>
-          <a href="#price">Cennic</a>
+          <a href="#price">Oferty</a>
           <a href="#about">O nas</a>
           <a href="#">Oferty specjalne</a>
           <a href="#faq">Portfolio</a>
@@ -100,7 +96,7 @@
         <a class="btn btn--primary" href="tel:+48504367207">Laweta 24/7</a>
       </div>
     </div>
-  </header>
+    </header>
 
     <main>
       <!-- 03. Hero Banner -->
@@ -354,33 +350,41 @@
               <h3>Każdy samochód ma swoją historię.</h3>
               <p>Here are a few we’re proud of.</p>
             </div>
-
             <div class="project-card">
-              <div class="project-card__media">
-                <img src="./images/before-after/luxus-before.jpg" alt="" />
-                <img src="./images/before-after/luxus-after.jpg" alt="" />
-              </div>
+              <div class="project-card__media comparison-mini">
+                <img class="comparison-mini__image comparison-mini__image--after" src="./images/before-after/bmw-after.jpg" alt="" />
+                <img class="comparison-mini__image comparison-mini__image--before" src="./images/before-after/bmw-before.jpg" alt="" />
 
-              <h4>Czyszczenie komory silnika</h4>
-            </div>
-            <div class="project-card">
-              <div class="project-card__media">
-                <img src="./images/before-after/bmw-before.jpg" alt="" />
-                <img src="./images/before-after/bmw-after.jpg" alt="" />
+                <div class="comparison-mini__line"></div>
+                <span class="comparison-mini__handle">‹ ›</span>
               </div>
 
               <h4>Korekta lakieru</h4>
             </div>
             <div class="project-card">
-              <div class="project-card__media">
-                <img src="./images/before-after/kuzov-before.jpg" alt="" />
-                <img src="./images/before-after/kuzov-after.jpg" alt="" />
+              <div class="project-card__media comparison-mini">
+                <img class="comparison-mini__image comparison-mini__image--after" src="./images/before-after/kuzov-after.jpg" alt="" />
+                <img class="comparison-mini__image comparison-mini__image--before" src="./images/before-after/kuzov-before.jpg" alt="" />
+
+                <div class="comparison-mini__line"></div>
+                <span class="comparison-mini__handle">‹ ›</span>
               </div>
 
               <h4>Naprawy blacharskie</h4>
             </div>
+            <div class="project-card">
+              <div class="comparison-mini">
+                <img class="comparison-mini__image comparison-mini__image--after" src="./images/before-after/luxus-after.jpg" alt="" />
+                <img class="comparison-mini__image comparison-mini__image--before" src="./images/before-after/luxus-before.jpg" alt="" />
 
+                <div class="comparison-mini__line"></div>
+                <span class="comparison-mini__handle">‹ ›</span>
+              </div>
+
+              <h4>Czyszczenie komory silnika</h4>
+            </div>
           </div>
+
         </div>
       </section>
 
@@ -966,13 +970,13 @@
     <div class="floating-booking" id="bookingPanel">
       <div class="floating-booking__inner">
         <div class="floating-booking__intro">
-          <p>Schedule a Visit</p>
-          <span>or ask a question</span>
+          <p>Zaplanuj wizytę</p>
+          <span>lub zadaj pytanie</span>
         </div>
 
         <form class="floating-booking__form">
           <div class="floating-booking__compact">
-            <input class="floating-booking__email js-expand-booking" type="email" placeholder="Your email" required />
+            <input class="floating-booking__email js-expand-booking" type="email" placeholder="Twój email" required />
 
             <button class="floating-booking__close js-close-booking" type="button" aria-label="Закрити форму">×</button>
           </div>
@@ -1070,22 +1074,38 @@
         bookingPanel.classList.remove("is-expanded");
       });
 
-      const comparison = document.querySelector(".comparison");
-      const beforeImage = document.querySelector(".comparison__image--before");
-      const line = document.querySelector(".comparison__line");
-      const handle = document.querySelector(".comparison__handle");
+      // BEFORE/AFTER
+      // BEFORE / AFTER — works for main + cards
+      const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
 
-      if (comparison) {
-        comparison.addEventListener("pointermove", (event) => {
+      comparisons.forEach((comparison) => {
+        const beforeImage = comparison.querySelector(
+          ".comparison__image--before, .comparison-mini__image--before"
+        );
+
+        const line = comparison.querySelector(
+          ".comparison__line, .comparison-mini__line"
+        );
+
+        const handle = comparison.querySelector(
+          ".comparison__handle, .comparison-mini__handle"
+        );
+
+        if (!beforeImage || !line || !handle) return;
+
+        const updateComparison = (event) => {
           const rect = comparison.getBoundingClientRect();
           const position = ((event.clientX - rect.left) / rect.width) * 100;
-          const clamped = Math.max(8, Math.min(position, 92));
+          const clamped = Math.max(0, Math.min(position, 100));
 
           beforeImage.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
           line.style.left = `${clamped}%`;
           handle.style.left = `${clamped}%`;
-        });
-      }
+        };
+
+        comparison.addEventListener("pointermove", updateComparison);
+        comparison.addEventListener("pointerdown", updateComparison);
+      });
 
       // Process Working
       const processSection = document.querySelector(".process");
