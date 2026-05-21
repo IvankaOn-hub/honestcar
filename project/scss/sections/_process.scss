@@ -31,7 +31,7 @@
     overflow: hidden;
     isolation: isolate;
 
-    border-radius: $radius-sm;
+    border-radius: $radius-md;
     background: $color-black;
 
     @include desktop {
@@ -98,11 +98,6 @@
     line-height: 1.65;
   }
 
-  .section__title {
-    margin-top: 18px;
-    max-width: 11ch;
-  }
-
   &__timeline {
     display: grid;
     gap: $gap-md;
@@ -113,7 +108,7 @@
     position: absolute;
     z-index: 5;
 
-    border-radius: $radius-sm;
+    border-radius: $radius-md;
     border: 1px solid rgba(127, 151, 199, 0.18);
 
     background: rgba(5, 9, 16, 0.64);
@@ -151,7 +146,7 @@
       height: 36px;
       margin-top: 10px;
 
-      border-radius: $radius-sm;
+      border-radius: $radius-md;
       background: rgba($color-white, 0.06);
       border: 1px solid rgba($color-white, 0.08);
     }
@@ -161,7 +156,7 @@
       height: 38px;
       margin-top: 12px;
 
-      border-radius: $radius-sm;
+      border-radius: $radius-md;
       border: 1px solid rgba(127, 151, 199, 0.28);
 
       background: rgba(127, 151, 199, 0.08);
@@ -317,7 +312,7 @@
 
   padding: 26px;
 
-  border-radius: $radius-sm;
+  border-radius: $radius-md;
   border: 1px solid rgba($color-white, 0.055);
 
   background: linear-gradient(180deg, rgba($color-white, 0.026), rgba($color-white, 0.012));

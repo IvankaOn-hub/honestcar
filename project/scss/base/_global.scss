@@ -72,6 +72,13 @@ h5{
 }
 
 .section {
+
+  @include desktop {
+    &__title {
+      max-width: 18ch;
+    }
+  }
+
   &__head {
     display: grid;
     gap: $gap-xl;
@@ -82,7 +89,7 @@ h5{
       align-items: end;
       gap: 80px;
     }
-
+    
     &-left {
       max-width: 45ch;
     }
@@ -140,6 +147,7 @@ h5{
 
 .lang-switcher {
   position: relative;
+
   &__current {
     min-width: 48px;
     height: 32px;
@@ -159,6 +167,7 @@ h5{
       background: rgba($color-white, 0.06);
     }
   }
+
   &__dropdown {
     position: absolute;
     top: calc(100% + 10px);

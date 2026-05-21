@@ -30,7 +30,7 @@
   &__image {
     object-fit: cover;
 
-    border-radius: $radius-sm;
+    border-radius: $radius-md;
     border: 1px solid rgba($color-white, 0.08);
 
     filter: grayscale(0.4) brightness(0.78) contrast(1.08);
