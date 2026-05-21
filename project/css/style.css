@@ -383,21 +383,45 @@ h5 {
 }
 .floating-booking__inner {
   min-height: 86px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
+}
+@media (min-width: 48rem) {
+  .floating-booking__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+}
+.floating-booking__intro {
+  padding: 1rem 0;
+  display: flex;
   align-items: center;
 }
+@media (min-width: 48rem) {
+  .floating-booking__intro {
+    padding: 0;
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
 .floating-booking__intro p {
-  color: #f5f5f7;
-  font-size: 14px;
-  line-height: 1.2;
+  margin-right: 0.25rem;
+}
+@media (min-width: 48rem) {
+  .floating-booking__intro p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-right: 0;
+  }
 }
 .floating-booking__intro span {
   display: block;
-  margin-top: 2px;
-  color: #8b949e;
-  font-size: 14px;
+}
+@media (min-width: 48rem) {
+  .floating-booking__intro span {
+    margin-top: 2px;
+    font-size: 14px;
+  }
 }
 .floating-booking__form {
   display: block;
@@ -2469,10 +2493,10 @@ textarea {
   text-decoration: none;
 }
 .blog-card__link {
-  margin-top: auto;
+  margin-top: 1rem;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 1rem;
   color: rgba(127, 151, 199, 0.82);
   font-size: 13px;
   font-weight: 500;
