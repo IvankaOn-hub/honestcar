@@ -945,10 +945,13 @@
           </div>
 
           <nav class="footer__nav" aria-label="Footer navigation">
-            <div class="footer__column">
-              <h5>Quick Links</h5>
+            <div class="footer__column footer-accordion is-open">
+              <button class="footer-accordion__trigger" type="button">
+                <h5>Quick Links</h5>
+                <span></span>
+              </button>
 
-              <ul>
+              <ul class="footer-accordion__content">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#before-after">Before / After</a></li>
                 <li><a href="#about">About Us</a></li>
@@ -958,10 +961,13 @@
               </ul>
             </div>
 
-            <div class="footer__column">
-              <h5>Services</h5>
+            <div class="footer__column footer-accordion">
+              <button class="footer-accordion__trigger" type="button">
+                <h5>Services</h5>
+                <span></span>
+              </button>
 
-              <ul>
+              <ul class="footer-accordion__content">
                 <li><a href="./services/diagnostics.html">Diagnostics</a></li>
                 <li><a href="./services/engine-repair.html">Engine Repair</a></li>
                 <li><a href="./services/suspension-repair.html">Suspension Repair</a></li>
@@ -973,10 +979,15 @@
           </nav>
 
           <div class="footer__contact">
-            <h5>Contact Us</h5>
+           
+            <div class="footer__column footer-accordion">
+              <button class="footer-accordion__trigger" type="button">
+                <h5>Kontakty</h5>
+                <span></span>
+              </button>
 
-            <ul>
-              <li>
+              <ul class="footer-accordion__content">
+                 <li>
                 <span>Phone</span>
                 <a href="tel:+48504367207">504 367 207</a>
               </li>
@@ -995,17 +1006,23 @@
                 <span>Hours</span>
                 <p>Mon - Sat: 8:00 - 20:00</p>
               </li>
-            </ul>
 
-            <a
-              class="footer__map"
-              href="https://maps.app.goo.gl/oJS1xrTatrGjEMio6"
-              target="_blank"
-              rel="noopener"
-              aria-label="Open location in Google Maps"
-            >
-              <img src="./images/contact/maps.png" alt="" />
-            </a>
+              <a
+                class="footer__map"
+                href="https://maps.app.goo.gl/oJS1xrTatrGjEMio6"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open location in Google Maps"
+              >
+                <img src="./images/contact/maps.png" alt="" />
+              </a>
+              </ul>
+              
+            </div>
+            
+         
+
+            
           </div>
         </div>
 
@@ -1127,8 +1144,7 @@
         bookingPanel.classList.remove("is-expanded");
       });
 
-      // BEFORE/AFTER
-      // BEFORE / AFTER — works for main + cards
+      // BEFORE / AFTER - works for main + cards
       const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
 
       comparisons.forEach((comparison) => {
@@ -1191,6 +1207,20 @@
           ? "Read more"
           : "Show less";
       });
+
+      //Footer
+      const footerAccordions = document.querySelectorAll(".footer-accordion");
+
+      footerAccordions.forEach((accordion) => {
+        const trigger = accordion.querySelector(".footer-accordion__trigger");
+
+        trigger.addEventListener("click", () => {
+          if (window.innerWidth > 768) return;
+
+          accordion.classList.toggle("is-open");
+        });
+      });
+
     </script>
   </body>
 </html>
