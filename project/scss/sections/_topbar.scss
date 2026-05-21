@@ -1,112 +1,98 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  min-height: 42px;
-  background: linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 0.88));
-  border-bottom: 1px solid rgba($color-white, 0.02);
-  backdrop-filter: blur(18px);
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
 
-  &__inner {
-    @include container;
-    @include flex-center;
-    min-height: 36px;
-
-  }
-
-  &__contacts {
-    display: none;
-  }
-
-  &__link {
+.topbar{
+  display: none;
+  @include desktop{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    min-height: 42px;
+    background: linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 0.88));
+    border-bottom: 1px solid rgba($color-white, 0.02);
+    backdrop-filter: blur(18px);
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    color: $color-white;
-    gap: 10px;
-    transition: $transition;
-    
-    &:hover {
-      color: $color-gray-light;
-    }
-  }
 
-  &__actions {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  &__socials {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    a {
-      transition: $transition;
-
-      &:hover {
-        color: $color-gray-light;
-      }
-    }
-  }
-
-  &__lang {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    a,
-    span {
-      color: $color-gray;
-      font-size: 1rem;
-    }
-
-    a {
-      transition: $transition;
-
-      &:hover,
-      &.is-active {
-        color: $color-white;
-      }
-    }
-  }
-
-  &__booking {
-    min-height: 2rem;
-    padding: 0 1rem;
-  }
-
-  @include tablet {
     &__inner {
-      justify-content: space-between;
+      @include container;
+      @include flex-center;
+      min-height: 36px;
+
     }
 
     &__contacts {
-      display: flex;
-      align-items: center;
-      gap: 24px;
+      display: none;
     }
 
-    &__phone,
-    &__address {
+    &__link {
+      display: flex;
+      align-items: center;
       color: $color-white;
+      gap: 10px;
       transition: $transition;
-
+      
       &:hover {
         color: $color-gray-light;
       }
     }
 
     &__actions {
-      width: auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &__socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      a {
+        transition: $transition;
+
+        &:hover {
+          color: $color-gray-light;
+        }
+      }
+    }
+
+    
+
+    &__booking {
+      min-height: 2rem;
+      padding: 0 1rem;
+    }
+
+    @include desktop {
+      &__inner {
+        justify-content: space-between;
+      }
+
+      &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      &__phone,
+      &__address {
+        color: $color-white;
+        transition: $transition;
+
+        &:hover {
+          color: $color-gray-light;
+        }
+      }
+
+      &__actions {
+        width: auto;
+      }
     }
   }
 }
+

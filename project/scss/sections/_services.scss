@@ -136,6 +136,7 @@
     }
     & .icon-round {
       transform: translateX(1ch);
+      background: rgba(255, 255, 255, 0.08);
       
       & img{
         filter: invert(.9);
@@ -144,6 +145,11 @@
    
   }
 
+  & img{
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: invert(.7);
+  }
   &__content {
     position: relative;
     z-index: 2;

@@ -9,18 +9,23 @@ body {
 section {
   @include section-padding;
 }
+
 h1{
   @include title-h1;
 }
+
 h2{
   @include title-h2;
 }
+
 h3{
   @include title-h3;
 }
+
 h4{
   @include title-h4;
 }
+
 h5{
   @include title-h5;
 }
@@ -38,12 +43,12 @@ h5{
   color: $color-blue-soft;
 }
 
-.container {
-  @include container;
+/* .no-scroll {
+  overflow: hidden;
 }
-
+ */
 .eyebrow {
-  color: $color-dark-gray;
+  color: $color-blue-light;
   font-family: $font-main;
   font-size: 11px;
   font-weight: 500;
@@ -63,10 +68,6 @@ h5{
   transition: $transition;
   &:hover{
     background: $color-glass-hover;
-  }
-  & img{
-    transition: $transition;
-    filter: invert(.7);
   }
 }
 
@@ -135,4 +136,66 @@ h5{
   }
 
  
+}
+
+.lang-switcher {
+  position: relative;
+  &__current {
+    min-width: 52px;
+    height: 32px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba($color-white, 0.08);
+    border-radius: $radius-sm;
+    background: rgba($color-white, 0.03);
+    color: $color-white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      background: rgba($color-white, 0.06);
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 100%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid rgba($color-white, 0.06);
+    border-radius: 12px;
+    background: rgba(2, 6, 13, 0.96);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: $transition;
+    a {
+      padding: 5px 10px;
+      border-radius: $radius-sm;
+      color: rgba($color-white, 0.72);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: $transition;
+      &:hover,
+      &.is-active {
+        background: rgba(255, 255, 255, 0.05);
+        color: $color-white;
+      }
+    }
+  }
+  &:hover {
+    .lang-switcher__dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
 }

@@ -4,12 +4,9 @@
 .process {
   position: relative;
   overflow: hidden;
- background:
+  background:
     radial-gradient(circle at 12% 45%, rgba(127, 151, 199, 0.07), transparent 34%),
     #050910;
- /*  background:
-    radial-gradient(circle at 18% 42%, rgba($color-blue, 0.08), transparent 34%),
-    radial-gradient(circle at 88% 20%, rgba(127, 151, 199, 0.055), transparent 28%), $color-black; */
 
   &__inner {
     @include container;
@@ -135,8 +132,7 @@
     span {
       display: block;
       margin-bottom: 12px;
-
-      color: rgba(127, 151, 199, 0.92);
+      color: $color-blue-light;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.18em;
@@ -359,7 +355,6 @@
   }
 
   h3 {
-    color: rgba($color-white, 0.92);
 
     font-family: $font-heading;
     font-size: clamp(24px, 2.5vw, 28px);
@@ -371,7 +366,6 @@
   p {
     margin-top: 12px;
 
-    color: rgba($color-white, 0.56);
     font-size: 15px;
     font-weight: 300;
     line-height: 1.65;

@@ -188,19 +188,89 @@
 .project-card {
   display: block;
 
-  img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
+  &:hover {
+    .project-card__media {
+      img {
+        filter: grayscale(0) brightness(0.85);
+        transform: scale(1.04);
+      }
 
+      &::before {
+        background: rgba($color-white, 0.85);
+      }
+    }
+  }
+
+  &__media {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
     border-radius: $radius-sm;
-    filter: grayscale(1) brightness(0.72);
+    background: rgba($color-white, 0.04);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 2;
+
+      width: 1px;
+      height: 100%;
+
+      background: rgba($color-white, 0.55);
+      transform: translateX(-50%);
+      transition: $transition;
+    }
+
+    &::after {
+      content: "<>";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+
+      width: 26px;
+      height: 26px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba($color-white, 0.45);
+      border-radius: 50%;
+      background: rgba(2, 6, 13, 0.72);
+      color: $color-white;
+      font-size: 12px;
+
+      transform: translate(-50%, -50%);
+      backdrop-filter: blur(10px);
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 7 / 10;
+      object-fit: cover;
+
+      filter: grayscale(.3) brightness(0.72);
+      transition: $transition;
+    }
+
+    img:first-child {
+      object-position: left center;
+    }
+
+    img:last-child {
+      object-position: right center;
+    }
   }
 
   h4 {
     margin-top: 14px;
-
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 500;
+    color: $color-white;
   }
 }

@@ -41,10 +41,16 @@
             </a>
           </div>
 
-          <div class="topbar__lang">
-            <a href="#" class="is-active">UA</a>
-            <span>/</span>
-            <a href="#">PL</a>
+          <div class="lang-switcher">
+            <button class="lang-switcher__current" type="button">
+              PL
+            </button>
+
+            <div class="lang-switcher__dropdown">
+              <a href="#" class="is-active">PL</a>
+              <a href="#">RU</a>
+              <a href="#">UA</a>
+            </div>
           </div>
 
           <button class="btn btn--ghost topbar__booking js-open-booking" type="button">Umów wizytę</button>
@@ -54,9 +60,34 @@
 
     <!-- 02. Header / Navigation -->
     <header class="header">
-      <div class="header__wrapper">
-        <a href="#" class="header__logo"><img src="images/logo.png" alt="Logo" /></a>
+    <div class="header__wrapper">
+      <a href="#" class="header__logo">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
 
+      <div class="header__actions">
+        <a class="" href="tel:504367207">
+        <img class="icon" src="./images/icons/call.svg" alt="Call" />
+        </a>
+        <div class="lang-switcher">
+              <button class="lang-switcher__current" type="button">
+                PL
+              </button>
+
+              <div class="lang-switcher__dropdown">
+                <a href="#" class="is-active">PL</a>
+                <a href="#">RU</a>
+                <a href="#">UA</a>
+              </div>
+        </div>
+      </div>
+      <button class="header__burger" type="button" aria-label="Otwórz menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header__mobile">
         <nav class="header__nav">
           <a href="#services">Usługi</a>
           <a href="#price">Cennic</a>
@@ -65,9 +96,11 @@
           <a href="#faq">Portfolio</a>
           <a href="#contact">Kontakt</a>
         </nav>
+
         <a class="btn btn--primary" href="tel:+48504367207">Laweta 24/7</a>
       </div>
-    </header>
+    </div>
+  </header>
 
     <main>
       <!-- 03. Hero Banner -->
@@ -201,7 +234,7 @@
               style="--bg-image: url(&quot;../images/services/additional.jpg&quot;)"
             >
               <div class="service-card__content">
-                <h3>Dodatkowe usługi</h3>
+                <h3>Blacharstwo i lakiernictwo</h3>
                 <div class="icon-round">
                   <img src="./images/icons/arrow-right.svg" alt="Arrow right" />
                 </div>
@@ -298,11 +331,11 @@
             </div>
 
             <div class="comparison">
-              <img class="comparison__image comparison__image--after" src="./images/before-after/after-main.png" alt="Car after service" />
+              <img class="comparison__image comparison__image--after" src="./images/before-after/after-main.jpg" alt="Car after service" />
 
               <img
                 class="comparison__image comparison__image--before"
-                src="./images/before-after/before-main.png"
+                src="./images/before-after/before-main.jpg"
                 alt="Car before service"
               />
 
@@ -322,20 +355,31 @@
               <p>Here are a few we’re proud of.</p>
             </div>
 
-            <a href="#" class="project-card">
-              <img src="./images/before-after/headlight.png" alt="" />
-              <h4>Renowacja reflektorów</h4>
-            </a>
+            <div class="project-card">
+              <div class="project-card__media">
+                <img src="./images/before-after/luxus-before.jpg" alt="" />
+                <img src="./images/before-after/luxus-after.jpg" alt="" />
+              </div>
 
-            <a href="#" class="project-card">
-              <img src="./images/before-after/headlight.png" alt="" />
+              <h4>Czyszczenie komory silnika</h4>
+            </div>
+            <div class="project-card">
+              <div class="project-card__media">
+                <img src="./images/before-after/bmw-before.jpg" alt="" />
+                <img src="./images/before-after/bmw-after.jpg" alt="" />
+              </div>
+
               <h4>Korekta lakieru</h4>
-            </a>
+            </div>
+            <div class="project-card">
+              <div class="project-card__media">
+                <img src="./images/before-after/kuzov-before.jpg" alt="" />
+                <img src="./images/before-after/kuzov-after.jpg" alt="" />
+              </div>
 
-            <a href="#" class="project-card">
-              <img src="./images/before-after/headlight.png" alt="" />
-              <h4>Naprawa zderzaka</h4>
-            </a>
+              <h4>Naprawy blacharskie</h4>
+            </div>
+
           </div>
         </div>
       </section>
@@ -361,14 +405,10 @@
           </div>
           <div class="about__media">
             <img
-              class="about__image about__image--main"
-              src="./images/about/workshop-tools.jpg"
-              alt="Workshop tools at Honest Car Service"
+              class="about__image"
+              src="./images/about/about.jpg"
+              alt="Honest Car Service"
             />
-
-            <img class="about__image about__image--top" src="./images/about/workshop-bay.jpg" alt="Car service workshop" />
-
-            <img class="about__image about__image--bottom" src="./images/about/workshop-street.jpg" alt="Cars inside the workshop" />
           </div>
         </div>
       </section>
@@ -744,23 +784,34 @@
     <!-- 14. Blog -->
      <section class="blog-preview section" id="blog">
       <div class="blog-preview__inner">
+        <div class="blog-preview__head">
+          <p class="eyebrow">Blog</p>
+
+          <h2 class="section__title">
+            Porady, wiadomości i spostrzeżenia
+          </h2>
+
+          <a href="./blog.html" class="btn btn--ghost">
+            Zobacz wszystkie
+          </a>
+        </div>
         <div class="blog-preview__grid">
           <article class="blog-card">
             <a href="./blog/when-change-tires.html">
-              <img src="./images/blog/car.png" alt="Car tire service">
+              <img src="./images/blog/blog-01.jpg" alt="Car tire service">
             </a>
 
             <div class="blog-card__content">
-              <p class="blog-card__category">Tips</p>
+              <p class="blog-card__category">Porady</p>
 
-              <h4>
+              <h5>
                 <a href="./blog/when-change-tires.html">
-                  When should you change your tires?
+                  Kiedy należy wymienić opony?
                 </a>
-              </h4>
+              </h5>
 
               <a href="./blog/when-change-tires.html" class="blog-card__link">
-                Read more
+                Więcej
                 <span>→</span>
               </a>
             </div>
@@ -768,20 +819,20 @@
 
           <article class="blog-card">
             <a href="./blog/car-needs-service.html">
-              <img src="./images/blog/car.png" alt="Mechanic checking engine">
+              <img src="./images/blog/blog-02.jpg" alt="Mechanic checking engine">
             </a>
 
             <div class="blog-card__content">
-              <p class="blog-card__category">Maintenance</p>
+              <p class="blog-card__category">Konserwacja</p>
 
-              <h4>
+              <h5>
                 <a href="./blog/car-needs-service.html">
-                  5 signs your car needs immediate attention
+                  5 oznak, że samochód wymaga uwagi
                 </a>
-              </h4>
+              </h5>
 
               <a href="./blog/car-needs-service.html" class="blog-card__link">
-                Read more
+                Więcej
                 <span>→</span>
               </a>
             </div>
@@ -789,38 +840,25 @@
 
           <article class="blog-card">
             <a href="./blog/change-oil.html">
-              <img src="./images/blog/car.png" alt="Oil change service">
+              <img src="./images/blog/blog-03.jpg" alt="Oil change service">
             </a>
 
             <div class="blog-card__content">
-              <p class="blog-card__category">Service</p>
+              <p class="blog-card__category">Serwice</p>
 
-              <h4>
+              <h5>
                 <a href="./blog/change-oil.html">
-                  How often should you change your oil?
+                  Jak często należy wymieniać olej?
                 </a>
-              </h4>
+              </h5>
 
               <a href="./blog/change-oil.html" class="blog-card__link">
-                Read more
+                Więcej
                 <span>→</span>
               </a>
             </div>
           </article>
         </div>
-        <div class="blog-preview__head">
-          <p class="eyebrow">Blog</p>
-
-          <h2 class="section__title">
-            Tips, news and insights
-          </h2>
-
-          <a href="./blog.html" class="btn btn--ghost">
-            View All Articles
-          </a>
-        </div>
-
-        
       </div>
     </section>
       
@@ -835,20 +873,23 @@
               <img src="./images/logo.png" alt="Honest Car Service" />
             </a>
 
-            <p>Professional car service in Warsaw. Honest approach, quality you can trust.</p>
+            <p>Profesjonalny serwis samochodowy w Warszawie. Uczciwe podejście, jakość, której możesz zaufać.</p>
 
             <div class="footer__socials">
-              <a href="#" aria-label="Facebook">Fb</a>
-              <a href="#" aria-label="Instagram">Ig</a>
-              <a href="#" aria-label="TikTok">Tk</a>
+              <a href="#" aria-label="Instagram" class="icon-round">
+                <img src="./images/icons/instagram.svg" alt="Instagram" class="icon icon--lg" />
+              </a>
+              <a href="#" aria-label="Facebook" class="icon-round">
+                <img src="./images/icons/facebook.svg" alt="Facebook" class="icon icon--lg" />
+              </a>
             </div>
 
-            <button class="btn btn--primary js-open-booking" type="button">Book a Visit</button>
+            <button class="btn btn--primary js-open-booking" type="button">Umów wizytę</button>
           </div>
 
           <nav class="footer__nav" aria-label="Footer navigation">
             <div class="footer__column">
-              <h3>Quick Links</h3>
+              <h5>Quick Links</h5>
 
               <ul>
                 <li><a href="#services">Services</a></li>
@@ -861,7 +902,7 @@
             </div>
 
             <div class="footer__column">
-              <h3>Services</h3>
+              <h5>Services</h5>
 
               <ul>
                 <li><a href="./services/diagnostics.html">Diagnostics</a></li>
@@ -875,7 +916,7 @@
           </nav>
 
           <div class="footer__contact">
-            <h3>Contact Us</h3>
+            <h5>Contact Us</h5>
 
             <ul>
               <li>
@@ -976,6 +1017,26 @@
     </div>
 
     <script>
+
+      //MOBILE MENU
+      const header = document.querySelector(".header");
+      const burger = document.querySelector(".header__burger");
+      const mobileLinks = document.querySelectorAll(".header__mobile a");
+
+      burger.addEventListener("click", () => {
+        header.classList.toggle("is-open");
+        document.body.classList.toggle("no-scroll");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          header.classList.remove("is-open");
+          document.body.classList.remove("no-scroll");
+        });
+      });
+
+
+      // OPEN BOOKING
       const bookingPanel = document.querySelector("#bookingPanel");
 
       const openButtons = document.querySelectorAll(".js-open-booking");
@@ -985,8 +1046,7 @@
       const closeButton = document.querySelector(".js-close-booking");
 
       const collapseButton = document.querySelector(".js-collapse-booking");
-
-      // OPEN BOOKING
+      
       openButtons.forEach((button) => {
         button.addEventListener("click", () => {
           bookingPanel.classList.remove("is-hidden");
