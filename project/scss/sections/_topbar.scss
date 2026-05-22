@@ -8,7 +8,7 @@
     top: 0;
     z-index: 9999;
     min-height: 42px;
-    background: linear-gradient(to right, rgba(5, 8, 22, 0.92), rgba(5, 8, 22, 0.75));
+    background-color: $color-black;
     border-bottom: 1px solid rgba($color-white, 0.02);
     backdrop-filter: blur(18px);
     font-size: 1rem;

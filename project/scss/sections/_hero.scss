@@ -27,10 +27,7 @@
     inset: 0;
     background:
     linear-gradient(
-      90deg,
-      rgba(5, 10, 20, 0.92) 0%,
-      rgba(5, 10, 20, 0.82) 40%,
-      rgba(5, 10, 20, 0.58) 100%
+      90deg, rgb(8 8 8) 0%, rgb(8 9 11 / 57%) 40%, rgb(8 8 8) 100%
     );
     z-index: 2;
   }

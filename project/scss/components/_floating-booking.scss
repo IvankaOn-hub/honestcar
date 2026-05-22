@@ -10,7 +10,7 @@
 
   min-height: 82px;
 
-  background: linear-gradient(90deg, rgba($color-navy, 0.78), rgba($color-navy-light, 0.54), rgba($color-blue, 0.16));
+  background: linear-gradient(90deg, rgb(8 8 8), rgb(8 8 8), rgb(8 8 8 / 46%));
 
   border-top: 1px solid rgba($color-white, 0.1);
   backdrop-filter: blur(22px);
@@ -107,7 +107,7 @@
 
     min-height: 100vh;
 
-    background: radial-gradient(circle at top right, rgba($color-blue, 0.18), transparent 36%), rgba($color-navy, 0.94);
+    background: radial-gradient(circle at top right, #e3e3e321, transparent 36%), rgba(8, 8, 8, 0.94);
 
     backdrop-filter: blur(28px);
 

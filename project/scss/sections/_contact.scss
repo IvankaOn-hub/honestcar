@@ -2,8 +2,6 @@
 @use "../abstracts/mixins" as *;
 
 .contact {
-  background:
-    linear-gradient(180deg, rgba(2, 6, 13, 0.96), rgba(2, 6, 13, 1));
 
   &__inner {
     @include container;
@@ -46,7 +44,6 @@
   &__list {
     width: 100%;
     margin-top: 60px;
-
     display: grid;
     gap: 14px;
   }

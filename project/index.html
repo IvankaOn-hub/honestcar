@@ -144,7 +144,7 @@
       </section>
 
       <!-- 04. Services -->
-      <section class="services section" id="services">
+      <section class="services section js-white-bg" id="services">
         <div class="container">
           <div class="section__head">
             <div class="section__head-left">
@@ -238,7 +238,7 @@
             </a>
           </div>
 
-          <div class="services__benefits">
+          <div class="services__benefits card">
             <div class="services__benefit">
               <div class="services__benefit-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -313,7 +313,7 @@
       </section>
 
       <!-- 05. Before / After -->
-      <section class="before-after section" id="before-after">
+      <section class="before-after section white-section" id="before-after">
         <div class="before-after__inner">
           <div class="before-after__layout">
             <div class="before-after__content">
@@ -344,7 +344,7 @@
             </div>
           </div>
 
-          <div class="before-after__projects">
+          <div class="before-after__projects card">
             <div class="before-after__projects-head">
               <p class="eyebrow">Więcej transformacji</p>
               <h3>Każdy samochód ma swoją historię.</h3>
@@ -418,7 +418,7 @@
       </section>
 
       <!-- 07. CTA BANNER -->
-       <section class="cta-banner">
+       <section class="cta-banner js-white-bg">
         <div class="cta-banner__inner">
           <div class="cta-banner__content">
             <p class="eyebrow">Zarezerwuj usługę</p>
@@ -527,7 +527,7 @@
       </section>
 
       <!-- 09. Car Brands -->
-      <section class="brands section" id="brands">
+      <section class="brands section white-section" id="brands">
         <div class="brands__inner">
             <div class="brands__content">
             <p class="eyebrow">Marki, które obsługujemy</p>
@@ -537,35 +537,35 @@
             <p>Nasi specjaliści mają doświadczenie w pracy z szeroką gamą marek i modeli.</p>
           </div>
           <div class="brands__grid">
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card">
+            <div class="brand-card card">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
           </div>
@@ -668,7 +668,7 @@
       </section>
 
       <!-- 12. FAQ -->
-      <section class="faq section" id="faq">
+      <section class="faq section white-section" id="faq">
       <div class="faq__inner">
         <div class="faq__content">
           <p class="eyebrow">FAQ</p>
@@ -679,7 +679,7 @@
 
         </div>
 
-        <div class="faq__accordion">
+        <div class="faq__accordion card">
           <details class="faq-item" open>
             <summary>
               Ile czasu zajmuje typowa naprawa?
@@ -738,8 +738,8 @@
       </div>
     </section>
 
-      <!-- 13. SEO Text -->
-      <section class="section seo-block" id="seo">
+    <!-- 13. SEO Text -->
+    <section class="section seo-block" id="seo">
       <div class="seo-block__inner">
                 <div class="seo-block__card">
           <div class="seo-block__content">
@@ -868,10 +868,10 @@
     </section>
 
   <!-- 16. Contact -->
-    <section class="contact section" id="contact">
+    <section class="contact section white-section" id="contact">
       <div class="contact__inner">
         <div class="grid">
-          <div class="contact__content">
+          <div class="contact__content card">
             <p class="eyebrow">Kontakt</p>
             <h2 class="section__title">Umów wizytę lub skontaktuj się z nami</h2>
 
@@ -1210,6 +1210,25 @@
           accordion.classList.toggle("is-open");
         });
       });
+
+      // Section BG
+      const sections = document.querySelectorAll(".js-white-bg");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle(
+              "white-section",
+              !entry.isIntersecting
+            );
+          });
+        },
+        {
+          threshold: 0.45,
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
 
     </script>
   </body>

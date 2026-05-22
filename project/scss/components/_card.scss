@@ -13,9 +13,9 @@
     border-color $transition,
     background $transition;
 
+
   &:hover {
     border-color: rgba(127, 151, 199, 0.24);
-    background: $color-glass-hover;
   }
 
 }
