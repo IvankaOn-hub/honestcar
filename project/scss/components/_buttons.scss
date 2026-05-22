@@ -36,18 +36,12 @@
     $color-blue-soft 100%
   );
 
-  border: 1px solid rgba($color-blue, 0.24);
-
   color: $color-white;
 
   &:hover {
     background: linear-gradient(
-      135deg,
-      lighten($color-blue, 4%) 0%,
-      lighten($color-blue-soft, 6%) 100%
+      135deg, rgb(16 78 153) 0%, rgb(91.0363636364, 150.0285714286, 218.5636363636) 100%
     );
-
-    border-color: rgba($color-blue, 0.45);
   }
 
   &::before {

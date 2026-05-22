@@ -9,6 +9,7 @@
 @use "./components/floating-booking";  
 @use "./components/input";
 @use "./components/card";
+@use "./components/modal";
 
  
 @use "./sections/topbar";
@@ -26,3 +27,4 @@
 @use "./sections/blog"; 
 @use "./sections/cta-banner"; 
 @use "./sections/contact"; 
+@use "./sections/slider"; 

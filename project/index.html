@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -462,45 +466,69 @@
             <a href="#" class="btn btn--ghost">Zobacz nas na Mapach Google</a>
           </div>
 
-          <div class="grid grid">
-            <article class="review-card">
+          <div class="reviews-slider tablet-slider swiper js-tablet-slider" data-slider="reviews">
+          <div class="grid grid--2 reviews-grid swiper-wrapper">
+
+            <article class="review-card swiper-slide">
               <div class="review-card__stars">★★★★★</div>
+
               <p>
-                Professional service, fair prices and very good contact. The car was ready on time and everything was explained in detail.
+                Professional, fair prices and very good contact.
+                The car was ready on time and everything was explained in detail.
               </p>
+
               <div class="review-card__footer">
                 <span>Artur</span>
                 <span>2 weeks ago</span>
               </div>
             </article>
 
-            <article class="review-card">
+            <article class="review-card swiper-slide">
               <div class="review-card__stars">★★★★★</div>
-              <p>Honest and reliable. They diagnosed the problem quickly and fixed it the same day.</p>
+
+              <p>
+                Honest and reliable. They diagnosed the problem quickly
+                and fixed it the same day.
+              </p>
+
               <div class="review-card__footer">
                 <span>Artur</span>
                 <span>1 month ago</span>
               </div>
             </article>
 
-            <article class="review-card">
+            <article class="review-card swiper-slide">
               <div class="review-card__stars">★★★★★</div>
-              <p>Great experience. Transparent pricing, no hidden costs and a very professional team.</p>
+
+              <p>
+                Great experience. Transparent pricing, no hidden costs
+                and a very professional team.
+              </p>
+
               <div class="review-card__footer">
                 <span>Artur</span>
                 <span>1 month ago</span>
               </div>
             </article>
 
-            <article class="review-card">
+            <article class="review-card swiper-slide">
               <div class="review-card__stars">★★★★★</div>
-              <p>I’ve been coming here for years. Always top quality service and a friendly atmosphere.</p>
+
+              <p>
+                I’ve been coming here for years. Always top quality
+                and a friendly atmosphere.
+              </p>
+
               <div class="review-card__footer">
                 <span>Artur</span>
                 <span>2 months ago</span>
               </div>
             </article>
+
           </div>
+
+          <div class="reviews-slider__pagination swiper-pagination"></div>
+      </div>
 
           <!-- <div class="reviews__stats">
             <div class="reviews__stat">
@@ -536,38 +564,42 @@
 
             <p>Nasi specjaliści mają doświadczenie w pracy z szeroką gamą marek i modeli.</p>
           </div>
-          <div class="brands__grid">
-            <div class="brand-card card">
+          <div class="brands-slider tablet-slider swiper js-tablet-slider" data-slider="brands">
+          <div class="brands__grid swiper-wrapper">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card card">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card card">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card card">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card card">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card card">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card card">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
 
-            <div class="brand-card card">
+            <div class="brand-card card swiper-slide">
               <img src="./images/brands/mercedes.png" alt="Mercedes-Benz" />
             </div>
+          </div>
+
+          <div class="brands-slider__pagination swiper-pagination"></div>
           </div>
           
         </div>
@@ -593,7 +625,7 @@
           <div class="process__grid">
             <div class="process__visual">
             <div class="process__image">
-              <img src="./images/process/process-car.png" alt="Car in premium service garage" />
+              <img src="./images/process/process-car.png" alt="Car in premium garage" />
 
               <div class="process__overlay process__overlay--form">
                 <span>Formularz</span>
@@ -668,7 +700,7 @@
       </section>
 
       <!-- 12. FAQ -->
-      <section class="faq section white-section" id="faq">
+      <section class="faq section js-white-bg" id="faq">
       <div class="faq__inner">
         <div class="faq__content">
           <p class="eyebrow">FAQ</p>
@@ -715,12 +747,12 @@
 
           <details class="faq-item">
             <summary>
-              Can I wait at your service center?
+              Can I wait at your center?
               <span></span>
             </summary>
 
             <p>
-              Yes, you can wait on site for selected services. For longer repairs, you can leave the car with us.
+              Yes, you can wait on site for selected. For longer repairs, you can leave the car with us.
             </p>
           </details>
 
@@ -751,7 +783,7 @@
 
             <div class="seo-block__text is-collapsed" id="seoText">
               <p>
-                Honest Car Service oferuje najwyższej jakości diagnostykę samochodową,
+                Honest Car oferuje najwyższej jakości diagnostykę samochodową,
                 naprawy i konserwację nowoczesnych pojazdów w Warszawie.
                 Łączymy precyzję na poziomie dealera z przejrzystym,
                 zorientowanym na klienta doświadczeniem.
@@ -759,7 +791,7 @@
 
               <p>
                 Our workshop specializes in diagnostics, suspension repair,
-                brake systems, drivetrain service and complex engine repairs.
+                brake systems, drivetrain and complex engine repairs.
                 Every vehicle is inspected using modern equipment and OEM-grade
                 procedures.
               </p>
@@ -870,7 +902,7 @@
   <!-- 16. Contact -->
     <section class="contact section white-section" id="contact">
       <div class="contact__inner">
-        <div class="grid">
+        <div class="grid grid--2">
           <div class="contact__content card">
             <p class="eyebrow">Kontakt</p>
             <h2 class="section__title">Umów wizytę lub skontaktuj się z nami</h2>
@@ -927,7 +959,7 @@
         <div class="footer__top">
           <div class="footer__brand">
             <a href="./index.html" class="footer__logo">
-              <img src="./images/logo.png" alt="Honest Car Service" />
+              <img src="./images/logo.png" alt="Honest Car" />
             </a>
 
             <p>Profesjonalny serwis samochodowy w Warszawie. Uczciwe podejście, jakość, której możesz zaufać.</p>
@@ -947,33 +979,32 @@
           <nav class="footer__nav" aria-label="Footer navigation">
             <div class="footer__column footer-accordion is-open">
               <button class="footer-accordion__trigger" type="button">
-                <h5>Quick Links</h5>
+                <h5>Nawigacja</h5>
                 <span></span>
               </button>
 
               <ul class="footer-accordion__content">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#before-after">Before / After</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="./blog.html">Blog</a></li>
+                <a href="#services">Usługi</a>
+                <a href="#price">Oferty</a>
+                <a href="#about">O nas</a>
+                <a href="#">Oferty specjalne</a>
+                <a href="#faq">Portfolio</a>
               </ul>
             </div>
 
             <div class="footer__column footer-accordion">
               <button class="footer-accordion__trigger" type="button">
-                <h5>Services</h5>
+                <h5>Usługi</h5>
                 <span></span>
               </button>
 
               <ul class="footer-accordion__content">
-                <li><a href="./services/diagnostics.html">Diagnostics</a></li>
-                <li><a href="./services/engine-repair.html">Engine Repair</a></li>
-                <li><a href="./services/suspension-repair.html">Suspension Repair</a></li>
-                <li><a href="./services/brake-system.html">Brake System</a></li>
-                <li><a href="./services/drivetrain-repair.html">Drivetrain Repair</a></li>
-                <li><a href="./services/additional-services.html">Additional Services</a></li>
+                <li><a href="./services/diagnostics.html">Diagnostyka</a></li>
+                <li><a href="./services/engine-repair.html">Naprawa silnika</a></li>
+                <li><a href="./services/suspension-repair.html">Naprawa zawieszenia</a></li>
+                <li><a href="./services/brake-system.html">Układ hamulcowy</a></li>
+                <li><a href="./services/drivetrain-repair.html">Naprawa układu napędowego</a></li>
+                <li><a href="./services/additional-services.html">Blacharstwo i lakiernictwo</a></li>
               </ul>
             </div>
           </nav>
@@ -988,22 +1019,22 @@
 
               <ul class="footer-accordion__content">
                  <li>
-                <span>Phone</span>
+                <span>Tekefon</span>
                 <a href="tel:+48504367207">504 367 207</a>
               </li>
 
               <li>
-                <span>Address</span>
+                <span>Adres</span>
                 <a href="https://www.google.com/maps" target="_blank" rel="noopener">Hetmańska 47A, 04-305 Warszawa</a>
               </li>
 
               <li>
-                <span>Email</span>
-                <a href="mailto:kontakt@honestcarservice.pl">kontakt@honestcarservice.pl</a>
+                <span>E-mail</span>
+                <a href="mailto:kontakt@honestcar.pl">kontakt@honestcar.pl</a>
               </li>
 
               <li>
-                <span>Hours</span>
+                <span>Godziny</span>
                 <p>Mon - Sat: 8:00 - 20:00</p>
               </li>
               </ul>
@@ -1017,7 +1048,7 @@
         </div>
 
         <div class="footer__bottom">
-          <p>© 2026 Honest Car Service. All rights reserved.</p>
+          <p>© 2026 Honest Car. All rights reserved.</p>
 
           <div>
             <a href="./privacy-policy.html">Privacy Policy</a>
@@ -1027,6 +1058,30 @@
       </div>
     </footer>
 
+    <!-- Truck -->
+    <button class="sticky-callback" type="button" aria-label="Zamów oddzwonienie">
+      <img class="icon icon--xl" src="images/icons/truck.png" alt="Icon Truck">
+    </button>
+
+    <!-- CALLBACK NODAL -->
+    <div class="modal" id="callbackModal">
+      <div class="modal__overlay"></div>
+
+      <div class="modal__content">
+        <button class="modal__close" type="button">×</button>
+
+        <h3 class="modal__title">Zostaw numer</h3>
+        <p class="modal__desc">Podaj imię i telefon, a skontaktujemy się z Tobą jak najszybciej.</p>
+
+        <form class="grid">
+          <input type="text" name="name" placeholder="Twoje imię" required>
+          <input type="tel" name="phone" placeholder="Numer telefonu" required>
+          <button class="btn btn--primary" type="submit">Zamów kontakt</button>
+        </form>
+      </div>
+    </div>
+
+     <!-- Booking -->
     <div class="floating-booking" id="bookingPanel">
       <div class="floating-booking__inner">
         <div class="floating-booking__intro">
@@ -1043,193 +1098,45 @@
 
           <div class="floating-booking__full">
             <div class="floating-booking__head">
-              <p class="eyebrow">Quick Booking</p>
-              <h2>Book a visit or get a service evaluation</h2>
-              <p>Fill out the short form and we will contact you to clarify the details.</p>
+              <p class="eyebrow">Szybka rezerwacja</p>
+              <h2>Umów się na wizytę lub uzyskaj ocenę usługi</h2>
+              <p>Wypełnij krótki formularz, a skontaktujemy się z Tobą w celu wyjaśnienia szczegółów.</p>
             </div>
 
             <div class="floating-booking__purpose">
-              <p>For what purpose do you want to contact?</p>
+              <p>W jakim celu chcesz się skontaktować?</p>
 
               <label>
                 <input type="radio" name="purpose" value="visit" checked />
-                <span>Book a visit</span>
+                <span>Zarezerwuj wizytę</span>
               </label>
 
               <label>
                 <input type="radio" name="purpose" value="question" />
-                <span>Another question</span>
+                <span>Masz pytanie</span>
               </label>
             </div>
 
             <div class="floating-booking__fields">
-              <input type="email" placeholder="Email" />
-              <input type="text" placeholder="Your name" />
-              <input type="tel" placeholder="Phone" />
-              <input type="text" placeholder="Last 7 digits of VIN" />
-              <textarea placeholder="Message"></textarea>
+              <input type="email" placeholder="E-mail" />
+              <input type="text" placeholder="Twoje imię" />
+              <input type="tel" placeholder="Telefon" />
+              <input type="text" placeholder="Ostatnie 7 cyfr numeru VIN" />
+              <textarea placeholder="Wiadomość"></textarea>
             </div>
 
             <div class="floating-booking__actions">
-              <button class="btn btn--primary" type="submit">Sign up</button>
+              <button class="btn btn--primary" type="submit">Wyślij</button>
 
-              <button class="btn btn--ghost js-collapse-booking" type="button">Back</button>
+              <button class="btn btn--ghost js-collapse-booking" type="button">Wróć</button>
             </div>
           </div>
         </form>
       </div>
     </div>
 
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-      //MOBILE MENU
-      const header = document.querySelector(".header");
-      const burger = document.querySelector(".header__burger");
-      const mobileLinks = document.querySelectorAll(".header__mobile a");
-
-      burger.addEventListener("click", () => {
-        header.classList.toggle("is-open");
-        document.body.classList.toggle("no-scroll");
-      });
-
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          header.classList.remove("is-open");
-          document.body.classList.remove("no-scroll");
-        });
-      });
-
-
-      // OPEN BOOKING
-      const bookingPanel = document.querySelector("#bookingPanel");
-
-      const openButtons = document.querySelectorAll(".js-open-booking");
-
-      const expandInput = document.querySelector(".js-expand-booking");
-
-      const closeButton = document.querySelector(".js-close-booking");
-
-      const collapseButton = document.querySelector(".js-collapse-booking");
-      
-      openButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          bookingPanel.classList.remove("is-hidden");
-
-          bookingPanel.classList.add("is-expanded");
-        });
-      });
-
-      // EXPAND ON EMAIL FOCUS
-      expandInput.addEventListener("focus", () => {
-        bookingPanel.classList.add("is-expanded");
-      });
-
-      // HIDE PANEL
-      closeButton.addEventListener("click", () => {
-        bookingPanel.classList.add("is-hidden");
-      });
-
-      // COLLAPSE FULLSCREEN
-      collapseButton.addEventListener("click", () => {
-        bookingPanel.classList.remove("is-expanded");
-      });
-
-      // BEFORE / AFTER - works for main + cards
-      const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
-
-      comparisons.forEach((comparison) => {
-        const beforeImage = comparison.querySelector(
-          ".comparison__image--before, .comparison-mini__image--before"
-        );
-
-        const line = comparison.querySelector(
-          ".comparison__line, .comparison-mini__line"
-        );
-
-        const handle = comparison.querySelector(
-          ".comparison__handle, .comparison-mini__handle"
-        );
-
-        if (!beforeImage || !line || !handle) return;
-
-        const updateComparison = (event) => {
-          const rect = comparison.getBoundingClientRect();
-          const position = ((event.clientX - rect.left) / rect.width) * 100;
-          const clamped = Math.max(0, Math.min(position, 100));
-
-          beforeImage.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
-          line.style.left = `${clamped}%`;
-          handle.style.left = `${clamped}%`;
-        };
-
-        comparison.addEventListener("pointermove", updateComparison);
-        comparison.addEventListener("pointerdown", updateComparison);
-      });
-
-      // Process Working
-      const processSection = document.querySelector(".process");
-      const processSteps = document.querySelectorAll(".process-step");
-
-      processSteps.forEach((step) => {
-        step.addEventListener("mouseenter", () => {
-          processSteps.forEach((item) => item.classList.remove("is-active"));
-
-          step.classList.add("is-active");
-          processSection.dataset.step = step.dataset.step;
-        });
-
-        step.addEventListener("click", () => {
-          processSteps.forEach((item) => item.classList.remove("is-active"));
-
-          step.classList.add("is-active");
-          processSection.dataset.step = step.dataset.step;
-        });
-      });
-
-      // SEO READ MORE
-      const seoToggle = document.getElementById("seoToggle");
-      const seoText = document.getElementById("seoText");
-
-      seoToggle?.addEventListener("click", () => {
-        seoText.classList.toggle("is-collapsed");
-
-        seoToggle.textContent = seoText.classList.contains("is-collapsed")
-          ? "Read more"
-          : "Show less";
-      });
-
-      //Footer
-      const footerAccordions = document.querySelectorAll(".footer-accordion");
-
-      footerAccordions.forEach((accordion) => {
-        const trigger = accordion.querySelector(".footer-accordion__trigger");
-
-        trigger.addEventListener("click", () => {
-          if (window.innerWidth > 768) return;
-
-          accordion.classList.toggle("is-open");
-        });
-      });
-
-      // Section BG
-      const sections = document.querySelectorAll(".js-white-bg");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            entry.target.classList.toggle(
-              "white-section",
-              !entry.isIntersecting
-            );
-          });
-        },
-        {
-          threshold: 0.45,
-        }
-      );
-
-      sections.forEach((section) => observer.observe(section));
-
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>

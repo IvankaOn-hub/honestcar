@@ -1,10 +1,9 @@
 .icon {
   width: 1rem;
   height: 1rem;
-
   flex-shrink: 0;
-
   display: block;
+  object-fit: cover;
 
   &--sm {
     width: .875rem;

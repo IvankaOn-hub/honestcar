@@ -45,10 +45,6 @@ h5{
   color: $color-blue-soft;
 }
 
-/* .no-scroll {
-  overflow: hidden;
-}
- */
 .eyebrow {
   color: $color-blue-light;
   font-family: $font-main;
@@ -157,8 +153,10 @@ h5{
   grid-template-columns: 1fr;
 
   @include tablet {
-    
-    grid-template-columns: repeat(2, 1fr);
+
+    &--2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     &--3 {
       grid-template-columns: repeat(2, 1fr);
@@ -243,4 +241,30 @@ h5{
       transform: translateY(0);
     }
   }
+}
+
+.sticky-callback {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  height: 3rem;
+  width: 3rem;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 $radius-md $radius-md 0;
+  color: $color-white;
+  background: linear-gradient(135deg, #2563ff, #13b5ff);
+
+  font-weight: 700;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-50%) translateX(4px);
+  }
+
 }
