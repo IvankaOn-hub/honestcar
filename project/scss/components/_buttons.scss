@@ -1,3 +1,4 @@
+@use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
 .btn {
@@ -9,7 +10,7 @@
   border-radius: $radius-sm;
   line-height: normal;
   font-family: $font-main;
-  font-size: .875rem;
+  font-size: .725rem;
   font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -23,13 +24,9 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
 
-  /* &:hover {
-    transform: translateY(-2px);
+  @include tablet{
+    font-size: .875rem;
   }
-
-  &:active {
-    transform: translateY(0);
-  } */
 }
 
 .btn--primary {
