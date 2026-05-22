@@ -1,22 +1,98 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+.process-mobile-info {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .process__grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process__content {
+    order: -1;
+  }
+
+  .process__timeline {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+    & .process-step {
+      padding: 1rem;
+      justify-content: center;
+      display: flex;
+      & h3{
+        font-size: 1rem;
+      }
+    }
+    
+  }
+
+  .process-step {
+    min-height: 52px;
+    padding: 12px 8px;
+    justify-content: center;
+    text-align: center;
+
+    .process-step__number {
+      display: none;
+    }
+
+    h3 {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .process__visual {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .process-mobile-info {
+    display: block;
+    padding: 22px;
+    border-radius: 18px;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .process-mobile-info__title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .process-mobile-info__text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.6;
+  }
+}
+
 .process {
   position: relative;
   overflow: hidden;
- /*  background:
-    radial-gradient(circle at 12% 45%, rgba(127, 151, 199, 0.07), transparent 34%),
-    #050910; */
 
   &__inner {
     @include container;
-
-    
   }
   &__grid{
     display: grid;
-    gap: 56px;
+   
 
+    @include tablet {
+      gap: 56px;
+    }
     @include desktop {
       grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
@@ -101,7 +177,9 @@
   &__timeline {
     display: grid;
     gap: $gap-md;
-    margin-top: 44px;
+   @include desktop {
+     margin-top: 44px;
+   }
   }
 
   &__overlay {

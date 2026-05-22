@@ -66,7 +66,7 @@ comparisons.forEach((comparison) => {
 });
 
 // Process Working
-const processSection = document.querySelector(".process");
+/* const processSection = document.querySelector(".process");
 const processSteps = document.querySelectorAll(".process-step");
 processSteps.forEach((step) => {
   step.addEventListener("mouseenter", () => {
@@ -78,6 +78,38 @@ processSteps.forEach((step) => {
     processSteps.forEach((item) => item.classList.remove("is-active"));
     step.classList.add("is-active");
     processSection.dataset.step = step.dataset.step;
+  });
+}); */
+
+// Process Working
+const processSection = document.querySelector(".process");
+const processSteps = document.querySelectorAll(".process-step");
+
+const mobileTitle = document.querySelector(".process-mobile-info__title");
+const mobileText = document.querySelector(".process-mobile-info__text");
+
+function setActiveProcess(step) {
+  processSteps.forEach((item) => item.classList.remove("is-active"));
+  step.classList.add("is-active");
+
+  processSection.dataset.step = step.dataset.step;
+
+  const title = step.querySelector("h3")?.textContent;
+  const text = step.querySelector("p")?.textContent;
+
+  if (mobileTitle && title) mobileTitle.textContent = title;
+  if (mobileText && text) mobileText.textContent = text;
+}
+
+processSteps.forEach((step) => {
+  step.addEventListener("mouseenter", () => {
+    if (window.innerWidth > 768) {
+      setActiveProcess(step);
+    }
+  });
+
+  step.addEventListener("click", () => {
+    setActiveProcess(step);
   });
 });
 

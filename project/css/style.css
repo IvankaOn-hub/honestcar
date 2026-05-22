@@ -123,6 +123,24 @@ h5 {
   color: #4286D5;
 }
 
+.d-lg-block {
+  display: none !important;
+}
+@media (min-width: 48rem) {
+  .d-lg-block {
+    display: block;
+  }
+}
+
+.d-xl-block {
+  display: none !important;
+}
+@media (min-width: 64rem) {
+  .d-xl-block {
+    display: block !important;
+  }
+}
+
 .eyebrow {
   color: rgba(127, 151, 199, 0.7215686275);
   font-family: "Inter", sans-serif;
@@ -1914,12 +1932,74 @@ textarea {
   transform: scale(1.04);
 }
 
+.process-mobile-info {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .process__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .process__content {
+    order: -1;
+  }
+  .process__timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .process__timeline .process-step {
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+  }
+  .process__timeline .process-step h3 {
+    font-size: 1rem;
+  }
+  .process-step {
+    min-height: 52px;
+    padding: 12px 8px;
+    justify-content: center;
+    text-align: center;
+  }
+  .process-step .process-step__number {
+    display: none;
+  }
+  .process-step h3 {
+    font-size: 13px;
+    margin: 0;
+  }
+  .process-step p {
+    display: none;
+  }
+  .process__visual {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .process-mobile-info {
+    display: block;
+    padding: 22px;
+    border-radius: 18px;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .process-mobile-info__title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #fff;
+  }
+  .process-mobile-info__text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.6;
+  }
+}
 .process {
   position: relative;
   overflow: hidden;
-  /*  background:
-     radial-gradient(circle at 12% 45%, rgba(127, 151, 199, 0.07), transparent 34%),
-     #050910; */
 }
 .process__inner {
   width: 100%;
@@ -1939,7 +2019,11 @@ textarea {
 }
 .process__grid {
   display: grid;
-  gap: 56px;
+}
+@media (min-width: 48rem) {
+  .process__grid {
+    gap: 56px;
+  }
 }
 @media (min-width: 64rem) {
   .process__grid {
@@ -2003,7 +2087,11 @@ textarea {
 .process__timeline {
   display: grid;
   gap: 1.5rem;
-  margin-top: 44px;
+}
+@media (min-width: 64rem) {
+  .process__timeline {
+    margin-top: 44px;
+  }
 }
 .process__overlay {
   position: absolute;

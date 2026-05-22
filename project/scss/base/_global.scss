@@ -45,6 +45,21 @@ h5{
   color: $color-blue-soft;
 }
 
+.d-lg-block {
+  display: none !important;
+
+  @include tablet {
+    display: block;
+  }
+}
+.d-xl-block {
+  display: none !important;
+  
+  @include desktop {
+    display: block !important;
+  }
+}
+
 .eyebrow {
   color: $color-blue-light;
   font-family: $font-main;
