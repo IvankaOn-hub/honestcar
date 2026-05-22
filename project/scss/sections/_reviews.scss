@@ -2,9 +2,17 @@
 @use "../abstracts/mixins" as *;
 
 .reviews {
- background:
+ /* background:
     radial-gradient(circle at 88% 18%, rgba(127, 151, 199, 0.05), transparent 30%),
-    #050910;
+    #050910; */
+    background:
+radial-gradient(
+circle at top left,
+rgba(30,64,175,.12),
+transparent 40%
+),
+#050816;
+
   &__inner {
     @include container;
 

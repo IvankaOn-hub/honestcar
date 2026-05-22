@@ -2,11 +2,34 @@
 @use "../abstracts/mixins" as *;
 
 .services {
-  background:
+
+  
+  /* background:
     radial-gradient(circle at 12% 0%, rgba(127, 151, 199, 0.055), transparent 30%),
-    #070b12;
+    #070b12; */
+  /* background:
+  linear-gradient(
+  180deg,
+  #07101f 0%,
+  #050816 100%
+  ); */
   position: relative;
   overflow: hidden;
+   background: linear-gradient(180deg, #07101f 0%, #050816 100%);
+   &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(59,130,246,.08),
+        transparent 40%
+      );
+
+    pointer-events: none;
+  }
  
 
   &__benefits {

@@ -2,7 +2,15 @@
 @use "../abstracts/mixins" as *;
 
 .before-after {
-  background: #050910;
+  /* background: #050910; */
+  background:
+linear-gradient(
+rgba(5,8,22,.98),
+rgba(5,8,22,.95)
+),
+url(../images/before-after/bg-garage.jpg);
+background-size: cover;
+background-attachment: fixed;
   
   &__inner {
     @include container;

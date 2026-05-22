@@ -2,7 +2,33 @@
 @use "../abstracts/mixins" as *;
 
 .brands {
-  background: #070b12;
+  /* background: #070b12; */
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(59, 130, 246, 0.12),
+      transparent 42%
+    ),
+    linear-gradient(
+      90deg,
+      #050816 0%,
+      #0b1730 48%,
+      #050816 100%
+    );
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.035),
+        rgba(255,255,255,0)
+      );
+    pointer-events: none;
+    z-index: 1;
+  }
 
   &__inner {
     @include container;
@@ -29,7 +55,6 @@
       order: 2;
     }
 
-    
   }
 
   &__grid {

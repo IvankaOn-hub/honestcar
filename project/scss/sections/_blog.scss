@@ -2,9 +2,15 @@
 @use "../abstracts/mixins" as *;
 
 .blog-preview {
-    background:
+  background:
+linear-gradient(
+180deg,
+#07101f,
+#0b1226
+);
+   /*  background:
     radial-gradient(circle at 85% 0%, rgba(127, 151, 199, 0.05), transparent 28%),
-    #050910;
+    #050910; */
 
   &__inner {
     @include container;
