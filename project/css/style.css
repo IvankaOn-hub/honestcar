@@ -37,7 +37,7 @@ ul {
 }
 
 body {
-  background: #080808;
+  background: #0f0f11;
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.4vw, 1.125rem);
   font-weight: 300;
