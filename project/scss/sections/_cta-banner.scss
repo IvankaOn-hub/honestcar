@@ -86,8 +86,10 @@
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
+    opacity: .2;
 
     @include tablet {
+      opacity: 1;
       
       clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
       width: 55%;
