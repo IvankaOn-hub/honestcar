@@ -299,6 +299,7 @@ h5 {
   visibility: hidden;
   transform: translateY(-8px);
   transition: 0.3s ease;
+  z-index: 9999;
 }
 .lang-switcher__dropdown a {
   padding: 5px 7px;
@@ -901,7 +902,7 @@ textarea {
     width: 100%;
     height: calc(100dvh - 90px);
     padding: 32px 24px;
-    background: rgba(2, 6, 13, 0.98);
+    background: #0f0f11;
     backdrop-filter: blur(24px);
     z-index: 110;
     display: flex;
@@ -1920,7 +1921,7 @@ textarea {
   }
 }
 .brand-card img {
-  max-width: 55%;
+  max-width: 45%;
   filter: grayscale(1) brightness(1.35);
   opacity: 0.72;
   transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
@@ -2521,6 +2522,9 @@ textarea {
 .blog-card:hover img {
   transform: scale(1.04);
 }
+.blog-card:hover .blog-card__link {
+  color: #f5f5f4;
+}
 .blog-card:hover .blog-card__link span {
   transform: translateX(5px);
 }
@@ -2750,6 +2754,8 @@ textarea {
   margin-top: 32px;
 }
 .contact__map {
+  position: relative;
+  overflow: hidden;
   border: 1px solid rgba(245, 245, 244, 0.08);
   border-top: none;
   border-radius: 0 0 8px 8px;
@@ -2761,6 +2767,14 @@ textarea {
     border-radius: 0 8px 8px 0;
   }
 }
+.contact__map:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 15, 19, 0.86);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
 .contact__map {
   min-height: 460px;
   overflow: hidden;
@@ -2770,7 +2784,7 @@ textarea {
   height: 100%;
   min-height: 460px;
   border: 0;
-  filter: grayscale(1) invert(0.92) contrast(1.1) brightness(0.72) hue-rotate(185deg) saturate(1.2);
+  filter: grayscale(1) invert(1) sepia(1) saturate(3) hue-rotate(170deg);
   transform: scale(1.02);
 }
 @media (max-width: 48rem) {

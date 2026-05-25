@@ -89,10 +89,14 @@ linear-gradient(
     img {
       transform: scale(1.04);
     }
+    .blog-card__link{
+        color: $color-white;
 
-    .blog-card__link span {
-      transform: translateX(5px);
+      span {
+        transform: translateX(5px);
+      }
     }
+
   }
 
   > a {

@@ -119,8 +119,8 @@ const seoText = document.getElementById("seoText");
 seoToggle?.addEventListener("click", () => {
   seoText.classList.toggle("is-collapsed");
   seoToggle.textContent = seoText.classList.contains("is-collapsed")
-    ? "Read more"
-    : "Show less";
+    ? "Przeczytaj więcej"
+    : "Pokaż mniej";
 });
 
 //Footer
