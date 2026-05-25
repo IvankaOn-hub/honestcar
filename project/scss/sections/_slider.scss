@@ -13,6 +13,10 @@
   }
 }
 
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
+  background: #b4b6baa1;
+}
+
 @media (max-width: 1024px) {
   .tablet-slider {
     overflow: hidden;
