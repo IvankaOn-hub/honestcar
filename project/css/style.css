@@ -1671,7 +1671,7 @@ textarea {
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid rgba(245, 245, 244, 0.08);
-  filter: grayscale(0.4) brightness(0.78) contrast(1.08);
+  /* filter: grayscale(0.4) brightness(0.78) contrast(1.08); */
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
 }
 .about__content {
