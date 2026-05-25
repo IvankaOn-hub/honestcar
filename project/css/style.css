@@ -495,7 +495,7 @@ h5 {
 }
 .floating-booking__compact {
   display: grid;
-  grid-template-columns: minmax(280px, 420px) 36px;
+  grid-template-columns: minmax(280px, 100%) 36px;
   gap: 14px;
   align-items: center;
 }
@@ -1160,7 +1160,7 @@ textarea {
 .footer__nav {
   display: grid;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .footer__nav {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -1261,7 +1261,7 @@ textarea {
 .footer-accordion.is-open .footer-accordion__trigger span::after {
   transform: translate(-50%, -50%) rotate(0);
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   .footer-accordion {
     padding: 18px 0;
     border-bottom: 1px solid rgba(245, 245, 244, 0.08);
@@ -1923,10 +1923,15 @@ textarea {
   }
 }
 .brand-card img {
-  max-width: 45%;
+  max-width: 65%;
   filter: grayscale(1) brightness(1.35);
   opacity: 0.72;
   transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+@media (min-width: 64rem) {
+  .brand-card img img {
+    max-width: 45%;
+  }
 }
 .brand-card:hover {
   /* transform: translateY(-3px); */
@@ -1954,11 +1959,11 @@ textarea {
   .process__timeline {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 5px;
     margin-bottom: 24px;
   }
   .process__timeline .process-step {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     justify-content: center;
     display: flex;
   }
@@ -1988,8 +1993,8 @@ textarea {
   }
   .process-mobile-info {
     display: block;
-    padding: 22px;
-    border-radius: 18px;
+    padding: 1rem;
+    border-radius: 8px;
     background: #111;
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
@@ -2101,7 +2106,7 @@ textarea {
 }
 .process__timeline {
   display: grid;
-  gap: 1rem;
+  gap: 10px;
 }
 @media (min-width: 64rem) {
   .process__timeline {
@@ -2341,8 +2346,14 @@ textarea {
   backdrop-filter: blur(8px);
   border-radius: 8px;
   border: 1px solid rgba(245, 245, 244, 0.06);
+  padding: 0;
   background: linear-gradient(180deg, rgba(245, 245, 244, 0.026), rgba(245, 245, 244, 0.012));
   overflow: hidden;
+}
+@media (min-width: 64rem) {
+  .faq__accordion {
+    padding: 1rem;
+  }
 }
 
 .faq-item {
@@ -2353,7 +2364,7 @@ textarea {
 }
 .faq-item summary {
   min-height: 72px;
-  padding: 0 28px;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

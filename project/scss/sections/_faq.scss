@@ -24,6 +24,7 @@
     backdrop-filter: blur(8px);
     border-radius: $radius-md;
     border: 1px solid rgba($color-white, 0.06);
+    padding: 0;
 
     background:
       linear-gradient(
@@ -33,6 +34,10 @@
       );
 
     overflow: hidden;
+
+    @include desktop{
+      padding: 1rem;
+    }
   }
 }
 
@@ -45,7 +50,7 @@
 
   summary {
     min-height: 72px;
-    padding: 0 28px;
+    padding: 1rem 1.25rem;
 
     display: flex;
     align-items: center;

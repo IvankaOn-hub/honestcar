@@ -65,7 +65,7 @@
 
   &__compact {
     display: grid;
-    grid-template-columns: minmax(280px, 420px) 36px;
+    grid-template-columns: minmax(280px, 100%) 36px;
     gap: 14px;
     align-items: center;
   }

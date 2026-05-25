@@ -71,7 +71,7 @@
   &__nav {
     display: grid;
 
-    @include tablet {
+    @include desktop {
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
     }
@@ -204,7 +204,7 @@
     }
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     padding: 18px 0;
     border-bottom: 1px solid rgba($color-white, 0.08);
 
