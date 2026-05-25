@@ -202,13 +202,14 @@ h5 {
 .section__head {
   display: grid;
   gap: 1.875rem;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 @media (min-width: 64rem) {
   .section__head {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: end;
     gap: 80px;
+    margin-bottom: 80px;
   }
 }
 .section__head-left {
@@ -1996,7 +1997,15 @@ textarea {
     margin: 0 0 10px;
     font-size: 24px;
     color: #fff;
+    display: none;
   }
+}
+@media (max-width: 768px) and (min-width: 48rem) {
+  .process-mobile-info__title {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
   .process-mobile-info__text {
     margin: 0;
     color: rgba(255, 255, 255, 0.72);
@@ -2092,7 +2101,7 @@ textarea {
 }
 .process__timeline {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 @media (min-width: 64rem) {
   .process__timeline {

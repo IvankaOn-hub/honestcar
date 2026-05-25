@@ -130,12 +130,13 @@ h5{
   &__head {
     display: grid;
     gap: $gap-xl;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 
     @include desktop {
       grid-template-columns: 1.1fr 0.9fr;
       align-items: end;
       gap: 80px;
+      margin-bottom: 80px;
     }
     
     &-left {

@@ -70,6 +70,11 @@
     margin: 0 0 10px;
     font-size: 24px;
     color: #fff;
+    display: none;
+    
+    @include tablet{
+      display: block;
+    }
   }
 
   .process-mobile-info__text {
@@ -176,7 +181,7 @@
 
   &__timeline {
     display: grid;
-    gap: $gap-md;
+    gap: $gap-sm;
    @include desktop {
      margin-top: 44px;
    }
