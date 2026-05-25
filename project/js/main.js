@@ -247,3 +247,30 @@ function initTabletSliders() {
 
 window.addEventListener('load', initTabletSliders);
 window.addEventListener('resize', initTabletSliders);
+
+
+
+// Brands show all
+const brandsSection = document.querySelector(".brands");
+const brandsBtn = document.querySelector(".js-show-all-brands");
+const brandCards = document.querySelectorAll(".brands .brand-card");
+
+if (brandsSection && brandsBtn && brandCards.length) {
+  brandCards.forEach((card, index) => {
+    if (index > 7) card.classList.add("is-hidden");
+  });
+
+  brandsBtn.addEventListener("click", () => {
+    brandsSection.classList.toggle("is-expanded");
+
+    const isExpanded = brandsSection.classList.contains("is-expanded");
+
+    brandCards.forEach((card, index) => {
+      if (index > 7) {
+        card.classList.toggle("is-hidden", !isExpanded);
+      }
+    });
+
+    brandsBtn.textContent = isExpanded ? "Pokaż mniej" : "Pokaż wszystkie";
+  });
+}

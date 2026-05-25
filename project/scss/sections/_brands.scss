@@ -11,14 +11,13 @@
 
     @include desktop {
       grid-template-columns: 0.68fr 0.32fr;
-      align-items: center;
       gap: 72px;
     }
   }
 
   &__content {
     p:not(.eyebrow) {
-      margin-top: 24px;
+      margin: 24px 0;
       max-width: 300px;
 
       font-weight: 300;
@@ -69,8 +68,14 @@
     border-color 0.35s ease,
     background 0.35s ease;
 
+   @include desktop {
+    &.is-hidden {
+      display: none;
+    }
+  }
+
   img {
-    max-width: 75%;
+    max-width: 55%;
 
     filter: grayscale(1) brightness(1.35);
     opacity: 0.72;
