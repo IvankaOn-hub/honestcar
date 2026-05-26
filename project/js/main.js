@@ -41,7 +41,6 @@ collapseButton.addEventListener("click", () => {
 });
 
 // BEFORE / AFTER - works for main + cards
-
 const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
 
 comparisons.forEach((comparison) => {
