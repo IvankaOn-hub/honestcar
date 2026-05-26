@@ -50,6 +50,8 @@ comparisons.forEach((comparison) => {
 
   if (!beforeImage || !line || !handle) return;
 
+  let isDragging = false;
+
   const updateComparison = (clientX) => {
     const rect = comparison.getBoundingClientRect();
     const position = ((clientX - rect.left) / rect.width) * 100;
@@ -61,15 +63,6 @@ comparisons.forEach((comparison) => {
   };
 
   comparison.addEventListener(
-    "touchmove",
-    (event) => {
-      event.preventDefault();
-      updateComparison(event.touches[0].clientX);
-    },
-    { passive: false }
-  );
-
-  comparison.addEventListener(
     "touchstart",
     (event) => {
       event.preventDefault();
@@ -78,8 +71,27 @@ comparisons.forEach((comparison) => {
     { passive: false }
   );
 
-  comparison.addEventListener("mousemove", (event) => {
+  comparison.addEventListener(
+    "touchmove",
+    (event) => {
+      event.preventDefault();
+      updateComparison(event.touches[0].clientX);
+    },
+    { passive: false }
+  );
+
+  comparison.addEventListener("mousedown", (event) => {
+    isDragging = true;
     updateComparison(event.clientX);
+  });
+
+  window.addEventListener("mousemove", (event) => {
+    if (!isDragging) return;
+    updateComparison(event.clientX);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
   });
 });
 
