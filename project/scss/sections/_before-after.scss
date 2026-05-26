@@ -1,12 +1,13 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.comparison,
+/* .comparison,
 .comparison-mini {
   touch-action: none;
   user-select: none;
   overflow: hidden;
-}
+} */
+ 
 
 .before-after {
   background:
@@ -255,7 +256,7 @@ background-attachment: fixed;
     line-height: 1;
 
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    cursor: grab;
     backdrop-filter: blur(10px);
   }
 }
