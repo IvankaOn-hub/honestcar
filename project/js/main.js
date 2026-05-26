@@ -41,7 +41,58 @@ collapseButton.addEventListener("click", () => {
 });
 
 // BEFORE / AFTER - works for main + cards
+
 const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
+
+comparisons.forEach((comparison) => {
+  const beforeImage = comparison.querySelector(
+    ".comparison__image--before, .comparison-mini__image--before"
+  );
+  const line = comparison.querySelector(
+    ".comparison__line, .comparison-mini__line"
+  );
+  const handle = comparison.querySelector(
+    ".comparison__handle, .comparison-mini__handle"
+  );
+
+  if (!beforeImage || !line || !handle) return;
+
+  let isDragging = false;
+
+  const updateComparison = (event) => {
+    const rect = comparison.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const position = (x / rect.width) * 100;
+    const clamped = Math.max(0, Math.min(position, 100));
+
+    beforeImage.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
+    line.style.left = `${clamped}%`;
+    handle.style.left = `${clamped}%`;
+  };
+
+  comparison.addEventListener("pointerdown", (event) => {
+    isDragging = true;
+    comparison.setPointerCapture(event.pointerId);
+    updateComparison(event);
+  });
+
+  comparison.addEventListener("pointermove", (event) => {
+    if (!isDragging) return;
+    updateComparison(event);
+  });
+
+  comparison.addEventListener("pointerup", (event) => {
+    isDragging = false;
+    comparison.releasePointerCapture(event.pointerId);
+  });
+
+  comparison.addEventListener("pointercancel", () => {
+    isDragging = false;
+  });
+});
+
+
+/* const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
 comparisons.forEach((comparison) => {
   const beforeImage = comparison.querySelector(
     ".comparison__image--before, .comparison-mini__image--before"
@@ -63,7 +114,7 @@ comparisons.forEach((comparison) => {
   };
   comparison.addEventListener("pointermove", updateComparison);
   comparison.addEventListener("pointerdown", updateComparison);
-});
+}); */
 
 // Process Working
 /* const processSection = document.querySelector(".process");
