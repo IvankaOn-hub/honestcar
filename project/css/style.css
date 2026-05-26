@@ -444,9 +444,11 @@ h5 {
 }
 
 @media (max-width: 768px) {
-  .btn--primary::before,
+  .btn--primary::before {
+    animation: btnLightMobile 3.5s ease-in-out infinite;
+  }
   .btn--ghost::before {
-    animation: btnLightMobile 5s ease-in-out infinite;
+    animation: btnLightMobile 4s ease-in-out infinite;
   }
 }
 @keyframes btnLight {
