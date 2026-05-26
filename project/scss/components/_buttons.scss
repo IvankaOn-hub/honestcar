@@ -35,33 +35,47 @@
     $color-blue 0%,
     $color-blue-soft 100%
   );
-
   color: $color-white;
 
+  
+ 
+
   &:hover {
+    transform: translateY(-3px);
     background: linear-gradient(
-      135deg, rgb(16 78 153) 0%, rgb(91.0363636364, 150.0285714286, 218.5636363636) 100%
+      135deg, rgb(17, 100, 202) 0%, rgb(121, 179, 246) 100%
     );
   }
 
-  &::before {
+   &::before {
     content: "";
     position: absolute;
-    inset: 0;
-
+    top: 0;
+    left: -80%;
+    width: 40%;
+    height: 100%;
     background: linear-gradient(
-      120deg,
-      transparent 20%,
-      rgba(255, 255, 255, 0.12) 50%,
-      transparent 80%
+      90deg,
+      transparent,
+      rgba($color-white, 0.55),
+      transparent
     );
-
-    transform: translateX(-120%);
-    transition: transform 0.7s ease;
+    transform: skewX(-20deg);
   }
 
+
   &:hover::before {
-    transform: translateX(120%);
+    animation: btnLight 0.8s ease;
+  }
+}
+
+@keyframes btnLight {
+  from {
+    left: -80%;
+  }
+
+  to {
+    left: 120%;
   }
 }
 
