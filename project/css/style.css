@@ -324,22 +324,26 @@ h5 {
   position: fixed;
   left: 0;
   top: 75%;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
   transform: translateY(-50%);
-  z-index: 9999;
-  height: 3rem;
-  width: 3rem;
-  padding: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 0;
   border-radius: 0 8px 8px 0;
-  color: #f5f5f4;
-  background: linear-gradient(135deg, #2563ff, #13b5ff);
-  font-weight: 700;
+  background: #2f8cff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s ease;
+  box-shadow: 0 0 24px rgba(47, 140, 255, 0.45);
 }
 .sticky-callback:hover {
+  transform: translateY(-50%) translateX(4px);
+}
+.sticky-callback:hover .tooltip__content {
+  opacity: 1;
+  visibility: visible;
   transform: translateY(-50%) translateX(4px);
 }
 
@@ -695,6 +699,71 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.tooltip {
+  transition: 0.3s ease;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 0 8px 8px 0;
+  border: 1px solid rgba(47, 140, 255, 0.45);
+  animation: towPulse 1.8s infinite;
+}
+.tooltip__content {
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 50%;
+  min-width: 190px;
+  padding: 14px 16px;
+  transform: translateY(-50%);
+  border-radius: 14px;
+  background: #0f0f11;
+  border: 1px solid rgba(47, 140, 255, 0.35);
+  box-shadow: 0 18px 50px rgba(15, 15, 17, 0.35);
+  color: #f5f5f4;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+.tooltip__content::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%) rotate(45deg);
+  background: #0f0f11;
+  border-left: 1px solid rgba(47, 140, 255, 0.35);
+  border-bottom: 1px solid rgba(47, 140, 255, 0.35);
+}
+.tooltip__content strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.tooltip__content small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(245, 245, 244, 0.72);
+}
+
+@keyframes towPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
 .topbar {
   display: none;
 }

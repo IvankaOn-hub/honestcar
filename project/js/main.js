@@ -206,7 +206,7 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => observer.observe(section));
 
 // Call Back Modal
-const callbackBtn = document.querySelector('.sticky-callback');
+const callbackBtn = document.querySelector('.js-sticky-callback');
 const callbackModal = document.querySelector('#callbackModal');
 const callbackClose = callbackModal.querySelector('.modal__close');
 const callbackOverlay = callbackModal.querySelector('.modal__overlay');
