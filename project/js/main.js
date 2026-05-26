@@ -60,8 +60,9 @@ comparisons.forEach((comparison) => {
 
   const updateComparison = (event) => {
     const rect = comparison.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const position = (x / rect.width) * 100;
+    const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+
+    const position = ((clientX - rect.left) / rect.width) * 100;
     const clamped = Math.max(0, Math.min(position, 100));
 
     beforeImage.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
@@ -71,18 +72,27 @@ comparisons.forEach((comparison) => {
 
   comparison.addEventListener("pointerdown", (event) => {
     isDragging = true;
-    comparison.setPointerCapture(event.pointerId);
+    event.preventDefault();
+
+    if (comparison.setPointerCapture) {
+      comparison.setPointerCapture(event.pointerId);
+    }
+
     updateComparison(event);
   });
 
   comparison.addEventListener("pointermove", (event) => {
     if (!isDragging) return;
+    event.preventDefault();
     updateComparison(event);
   });
 
   comparison.addEventListener("pointerup", (event) => {
     isDragging = false;
-    comparison.releasePointerCapture(event.pointerId);
+
+    if (comparison.releasePointerCapture) {
+      comparison.releasePointerCapture(event.pointerId);
+    }
   });
 
   comparison.addEventListener("pointercancel", () => {
