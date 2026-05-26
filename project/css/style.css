@@ -443,14 +443,14 @@ h5 {
   animation: btnLight 0.9s ease;
 }
 
-@media (max-width: 768px) {
-  .btn--primary::before {
-    animation: btnLightMobile 3.5s ease-in-out infinite;
-  }
-  .btn--ghost::before {
-    animation: btnLightMobile 4s ease-in-out infinite;
-  }
+.btn--primary::before {
+  animation: btnLightMobile 3.5s ease-in-out infinite;
 }
+
+.btn--ghost::before {
+  animation: btnLightMobile 4s ease-in-out infinite;
+}
+
 @keyframes btnLight {
   from {
     left: -80%;
