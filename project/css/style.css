@@ -1417,13 +1417,12 @@ textarea {
 }
 
 .comparison,
-.comparison-mini,
-.comparison__handle,
-.comparison-mini__handle {
+.comparison-mini {
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+  overscroll-behavior: contain;
 }
 
 .before-after {

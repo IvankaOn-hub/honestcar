@@ -44,24 +44,14 @@ collapseButton.addEventListener("click", () => {
 const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
 
 comparisons.forEach((comparison) => {
-  const beforeImage = comparison.querySelector(
-    ".comparison__image--before, .comparison-mini__image--before"
-  );
-  const line = comparison.querySelector(
-    ".comparison__line, .comparison-mini__line"
-  );
-  const handle = comparison.querySelector(
-    ".comparison__handle, .comparison-mini__handle"
-  );
+  const beforeImage = comparison.querySelector(".comparison__image--before, .comparison-mini__image--before");
+  const line = comparison.querySelector(".comparison__line, .comparison-mini__line");
+  const handle = comparison.querySelector(".comparison__handle, .comparison-mini__handle");
 
   if (!beforeImage || !line || !handle) return;
 
-  let isDragging = false;
-
-  const updateComparison = (event) => {
+  const updateComparison = (clientX) => {
     const rect = comparison.getBoundingClientRect();
-    const clientX = event.touches ? event.touches[0].clientX : event.clientX;
-
     const position = ((clientX - rect.left) / rect.width) * 100;
     const clamped = Math.max(0, Math.min(position, 100));
 
@@ -70,33 +60,26 @@ comparisons.forEach((comparison) => {
     handle.style.left = `${clamped}%`;
   };
 
-  comparison.addEventListener("pointerdown", (event) => {
-    isDragging = true;
-    event.preventDefault();
+  comparison.addEventListener(
+    "touchmove",
+    (event) => {
+      event.preventDefault();
+      updateComparison(event.touches[0].clientX);
+    },
+    { passive: false }
+  );
 
-    if (comparison.setPointerCapture) {
-      comparison.setPointerCapture(event.pointerId);
-    }
+  comparison.addEventListener(
+    "touchstart",
+    (event) => {
+      event.preventDefault();
+      updateComparison(event.touches[0].clientX);
+    },
+    { passive: false }
+  );
 
-    updateComparison(event);
-  });
-
-  comparison.addEventListener("pointermove", (event) => {
-    if (!isDragging) return;
-    event.preventDefault();
-    updateComparison(event);
-  });
-
-  comparison.addEventListener("pointerup", (event) => {
-    isDragging = false;
-
-    if (comparison.releasePointerCapture) {
-      comparison.releasePointerCapture(event.pointerId);
-    }
-  });
-
-  comparison.addEventListener("pointercancel", () => {
-    isDragging = false;
+  comparison.addEventListener("mousemove", (event) => {
+    updateComparison(event.clientX);
   });
 });
 
