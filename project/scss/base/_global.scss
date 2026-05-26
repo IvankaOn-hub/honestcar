@@ -101,6 +101,16 @@ h5{
     background-color: rgba(156, 156, 159, 0.005);
     border: 0.0625rem solid rgb(39 39 39 / 12%);
     color: $color-black;
+
+    &::before {
+    
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba($color-gray-light, 0.45),
+      transparent
+    );
+    }
   
 
     &:hover {
