@@ -6,16 +6,12 @@
   padding: 1.5rem;
   border-radius: $radius-md;
   background: $color-glass;
-  /* border: 0.0625rem solid $color-border-soft; */
   overflow: hidden;
   transition:
     transform $transition,
     border-color $transition,
     background $transition;
-
-
   &:hover {
     border-color: rgba(127, 151, 199, 0.24);
   }
-
 }

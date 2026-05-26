@@ -113,14 +113,14 @@ h5{
     background-color: $color-black;
     color: $color-white;
 
-    & h2, h3, p{
+    & h2, h3, p:not(.eyebrow){
       color: $color-white;
     }
 
   }
 }
 
-.section {
+ .section {
   @include desktop {
     &__title {
       max-width: 18ch;
@@ -161,7 +161,7 @@ h5{
     font-size: 1.125rem;
     line-height: 1.7;
   }
-}
+} 
 
 .grid {
   display: grid;
@@ -259,8 +259,6 @@ h5{
     }
   }
 }
-
-
 
 .sticky-callback {
   position: fixed;
